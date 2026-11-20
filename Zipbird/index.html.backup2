@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Vuelo de Palabras</title>
+  <meta name="theme-color" content="#050b14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#050b14" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Juego de respuestas raras en español. Haz volar tu pájaro respondiendo palabras poco comunes. Gratis e ilimitado.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VueloPalabras">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Vuelo de Palabras">
+  <meta name="msapplication-TileColor" content="#050b14">
+  <meta name="msapplication-TileImage" content="icons/icon-144.svg">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg">
+  <link rel="icon" type="image/svg+xml" sizes="192x192" href="icons/icon-192.svg">
+  <link rel="icon" type="image/svg+xml" sizes="512x512" href="icons/icon-512.svg">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.svg">
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/apple-touch-icon.svg">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon.svg">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon.svg">
+  <link rel="mask-icon" href="icons/icon-maskable.svg" color="#050b14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondos por escenario (uno por respuesta correcta) -->
+  <div class="fondo banda-0 activa" id="fondo-0"></div>
+  <div class="fondo banda-1" id="fondo-1"></div>
+  <div class="fondo banda-2" id="fondo-2"></div>
+  <div class="fondo banda-3" id="fondo-3"></div>
+  <div class="fondo banda-4" id="fondo-4"></div>
+  <div class="fondo banda-5" id="fondo-5"></div>
+  <div class="fondo banda-6" id="fondo-6"></div>
+  <div class="fondo banda-7" id="fondo-7"></div>
+
+  <!-- Nuevas capas para zonas de altitud -->
+  <div class="capa" id="capa-montanas"></div>
+  <div class="capa" id="capa-estratosfera"></div>
+
+  <div class="vineta"></div>
+  <div class="flash" id="flash"></div>
+
+  <!-- Ráfagas de velocidad al ascender -->
+  <div class="ascenso" id="efecto-ascenso" aria-hidden="true"></div>
+
+  <!-- Decoración de escenarios -->
+  <div class="capa activa" id="capa-estrellas"></div>
+  <div class="capa activa" id="capa-globos"></div>
+  <div class="capa activa" id="capa-nubes"></div>
+  <div class="capa" id="capa-aviones"></div>
+  <div class="capa" id="capa-cohetes"></div>
+  <div class="capa" id="capa-orbita"></div>
+  <div class="capa" id="capa-planetas"></div>
+  <div class="capa" id="capa-galaxias"></div>
+
+  <!-- Pájaro pixel -->
+  <div class="pajaro-juego" id="pajaro-juego">
+    <svg viewBox="0 0 18 16" shape-rendering="crispEdges" aria-hidden="true">
+      <!-- cola -->
+      <rect x="1" y="5" width="3" height="2" fill="#d43a6a"/>
+      <rect x="2" y="7" width="3" height="2" fill="#b32f57"/>
+      <!-- cuerpo -->
+      <rect x="4" y="6" width="8" height="5" fill="#ff4f82"/>
+      <rect x="5" y="10" width="7" height="1" fill="#d43a6a"/>
+      <!-- cabeza -->
+      <rect x="11" y="3" width="5" height="6" fill="#ff4f82"/>
+      <rect x="12" y="3" width="3" height="1" fill="#ff86a8"/>
+      <rect x="12" y="1" width="1" height="2" fill="#ff86a8"/>
+      <rect x="14" y="2" width="1" height="1" fill="#ff86a8"/>
+      <!-- pico -->
+      <rect x="16" y="5" width="2" height="1" fill="#ffd23f"/>
+      <rect x="16" y="6" width="1" height="1" fill="#e0a81f"/>
+      <!-- ojo -->
+      <rect x="13" y="5" width="1" height="1" fill="#1a0710"/>
+      <!-- ala arriba -->
+      <g class="ala-arr">
+        <rect x="8" y="4" width="1" height="2" fill="#ff86a8"/>
+        <rect x="8" y="2" width="3" height="2" fill="#ff86a8"/>
+        <rect x="10" y="1" width="2" height="1" fill="#ffb3c9"/>
+        <rect x="7" y="5" width="1" height="1" fill="#ff86a8"/>
+      </g>
+      <!-- ala abajo -->
+      <g class="ala-abj">
+        <rect x="5" y="11" width="5" height="1" fill="#ff86a8"/>
+        <rect x="6" y="12" width="4" height="1" fill="#ff86a8"/>
+        <rect x="7" y="13" width="2" height="1" fill="#ffb3c9"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Partículas de combo -->
+  <div class="particulas-combo" id="particulas-combo" aria-hidden="true"></div>
+
+  <!-- Iconos superiores -->
+  <button class="icono icono-menu" id="btn-menu" aria-label="Cómo jugar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </svg>
+  </button>
+
+  <button class="icono icono-sonido" id="btn-sonido" aria-label="Silenciar sonido">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M4 9v6h4l5 4V5L8 9H4z"/>
+      <path class="ondas" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12"/>
+      <path class="mudo-linea" d="M4 4 L20 20"/>
+    </svg>
+  </button>
+
+  <button class="icono icono-logros" id="btn-logros" aria-label="Logros">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M8 12l2 2 4-4"/>
+    </svg>
+  </button>
+
+  <!-- HUD superior -->
+  <header class="hud">
+    <div class="hud-bloque">
+      <span class="hud-label">ALTITUD</span>
+      <span class="hud-valor cian" id="hud-altitud">0m</span>
+    </div>
+
+    <div class="hud-centro">
+      <div class="cajas" id="cajas"></div>
+      <span class="hud-sub" id="hud-estado">DESPEGUE</span>
+    </div>
+
+    <div class="hud-bloque">
+      <span class="hud-label">PUNTAJE</span>
+      <span class="hud-valor rosa" id="hud-puntaje">0</span>
+    </div>
+  </header>
+
+  <!-- Combo HUD -->
+  <div class="hud-combo" id="hud-combo" aria-live="polite">
+    <span class="combo-label">COMBO</span>
+    <span class="combo-valor" id="combo-valor">x1</span>
+    <span class="combo-contador" id="combo-contador">0</span>
+  </div>
+
+  <!-- Zona actual con indicador visual -->
+  <div class="zona-indicador" id="zona-indicador">
+    <span class="zona-nombre" id="zona-nombre">CIELO</span>
+    <span class="zona-altitud" id="zona-altitud">0 - 1000 m</span>
+  </div>
+
+  <!-- Aviso de cambio de escenario -->
+  <div class="banner" id="banner"></div>
+
+  <!-- Regla de altitud derecha -->
+  <div class="regla" id="regla"></div>
+  <div class="marca-tu" id="marca-tu"><span>TÚ</span><i></i></div>
+
+  <!-- Escenario central -->
+  <main class="escenario">
+
+    <section id="pantalla-inicio" class="vista activa">
+      <p class="zona">VUELO ILIMITADO</p>
+      <h1 class="titulo-grande">VUELO DE PALABRAS</h1>
+      <p class="linea">respuestas raras · más altitud</p>
+
+      <div class="dificultad" id="selector-dificultad" role="group" aria-label="Elige el nivel de dificultad">
+        <button type="button" class="nivel-btn" data-dificultad="facil" aria-pressed="false">
+          <span class="nivel-nombre">FÁCIL</span>
+          <span class="nivel-detalle">30 s · directas</span>
+        </button>
+        <button type="button" class="nivel-btn activa" data-dificultad="media" aria-pressed="true">
+          <span class="nivel-nombre">MEDIO</span>
+          <span class="nivel-detalle">25 s · mezcla</span>
+        </button>
+        <button type="button" class="nivel-btn" data-dificultad="dificil" aria-pressed="false">
+          <span class="nivel-nombre">DIFÍCIL</span>
+          <span class="nivel-detalle">20 s · raras</span>
+        </button>
+      </div>
+
+      <p class="linea tenue" id="banco-nivel">eligiendo nivel…</p>
+      <p class="linea tenue"><span id="info-banco">miles de preguntas</span> · récord <span class="rosa" id="record">0 m</span></p>
+
+      <!-- Acceso rápido a logros desde inicio -->
+      <button class="btn-logros-inicio" id="btn-logros-inicio" aria-label="Ver logros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="miter">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8 12l2 2 4-4"/>
+        </svg>
+        <span>LOGROS</span>
+      </button>
+    </section>
+
+    <section id="pantalla-juego" class="vista">
+      <p class="zona" id="zona-actual">NUBES BAJAS</p>
+      <h2 class="prompt" id="texto-prompt">cargando pregunta…</h2>
+      <div class="barra-tiempo"><div class="barra-fill" id="barra-fill"></div></div>
+      <form id="form-respuesta" class="respuesta" autocomplete="off">
+        <input type="text" id="input-respuesta" placeholder="escribe tu respuesta" spellcheck="false" autocapitalize="off" autocorrect="off" inputmode="text">
+      </form>
+      <p class="feedback" id="mensaje-feedback"></p>
+      <p class="sublinea" id="sublinea-feedback">escribe una respuesta antes de que acabe el tiempo</p>
+    </section>
+
+    <section id="pantalla-resultados" class="vista">
+      <p class="zona" id="zona-final">NUBES BAJAS</p>
+      <h2 class="titulo-grande">VUELO COMPLETADO</h2>
+      <p class="puntos-grande" id="puntos-finales">+0 PUNTOS</p>
+      <p class="sublinea" id="calificacion-final">común</p>
+      <p class="linea tenue" id="nivel-final"></p>
+      <div class="resumen" id="resumen-respuestas"></div>
+
+      <!-- Logros desbloqueados en esta partida -->
+      <div class="logros-desbloqueados" id="logros-desbloqueados" style="display: none;">
+        <h3 class="logros-titulo">¡NUEVOS LOGROS!</h3>
+        <div class="logros-lista" id="logros-lista"></div>
+      </div>
+    </section>
+
+    <!-- Pantalla de Logros -->
+    <section id="pantalla-logros" class="vista">
+      <p class="zona">SALA DE TROFEOS</p>
+      <h2 class="titulo-grande">LOGROS</h2>
+      <div class="logros-grid" id="logros-grid"></div>
+      <p class="linea tenue" id="logros-progreso">0 / 0 desbloqueados</p>
+    </section>
+
+  </main>
+
+  <!-- Botón inferior grande -->
+  <footer class="pie">
+    <button id="btn-accion" class="btn-gran">DESPEGAR ▲</button>
+  </footer>
+
+  <!-- Menú de ayuda -->
+  <div class="overlay" id="overlay-menu">
+    <div class="overlay-panel">
+      <h2 class="overlay-titulo">CÓMO JUGAR</h2>
+      <ul class="overlay-lista">
+        <li>7 preguntas por vuelo · 25 segundos cada una</li>
+        <li><span id="menu-banco">miles</span> preguntas distintas</li>
+        <li><span id="menu-respuestas">miles</span> respuestas posibles, de comunes a legendarias</li>
+        <li>responde con la palabra más rara que se te ocurra</li>
+        <li>cada acierto sube al pájaro y cambia el escenario</li>
+        <li>respuestas raras = más puntos = más altitud</li>
+        <li>1 punto equivale a 10 metros de ascenso</li>
+        <li>sin límites: juega todas las veces que quieras</li>
+        <li>respuestas consecutivas crean COMBO · más puntos</li>
+        <li>alcanza nuevas zonas de altitud</li>
+        <li>desbloquea logros completando retos</li>
+      </ul>
+      <button id="btn-cerrar-menu" class="btn-gran">CERRAR</button>
+    </div>
+  </div>
+
+  <!-- Overlay de Logros -->
+  <div class="overlay" id="overlay-logros">
+    <div class="overlay-panel overlay-panel-logros">
+      <div class="overlay-header">
+        <h2 class="overlay-titulo">SALA DE TROFEOS</h2>
+        <button id="btn-cerrar-logros" class="icono icono-cerrar" aria-label="Cerrar logros">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt">
+            <path d="M18 6L6 18M6 6L18 18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="logros-grid" id="logros-grid-overlay"></div>
+      <p class="linea tenue" id="logros-progreso-overlay">0 / 0 desbloqueados</p>
+    </div>
+  </div>
+
+  <!-- Notificación de logro desbloqueado -->
+  <div class="toast-logro" id="toast-logro" aria-live="polite" role="alert">
+    <div class="toast-contenido">
+      <svg class="toast-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M8 12l2 2 4-4"/>
+      </svg>
+      <div class="toast-texto">
+        <span class="toast-titulo">¡LOGRO DESBLOQUEADO!</span>
+        <span class="toast-nombre" id="toast-nombre-logro"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="datos-naturaleza.js"></script>
+  <script src="datos-vida.js"></script>
+  <script src="datos-ocio.js"></script>
+  <script src="datos-espana.js"></script>
+  <script src="datos-mundo.js"></script>
+  <script src="datos-cultura.js"></script>
+  <script src="datos-ciencia.js"></script>
+  <script src="datos-extra.js"></script>
+  <script src="datos-series.js"></script>
+  <script src="datos-completar.js"></script>
+  <script src="datos-masivo-1.js"></script>
+  <script src="datos-masivo-2.js"></script>
+  <script src="datos-masivo-3.js"></script>
+  <script src="datos-masivo-4.js"></script>
+  <script src="datos-masivo-5.js"></script>
+  <script src="datos-masivo-6.js"></script>
+  <script src="datos-masivo-7.js"></script>
+  <script src="datos-masivo-8.js"></script>
+  <script src="datos-masivo-9.js"></script>
+  <script src="datos-total-base.js"></script>
+  <script src="datos-total-1.js"></script>
+  <script src="datos-total-2.js"></script>
+  <script src="datos-total-3.js"></script>
+  <script src="datos-total-4.js"></script>
+  <script src="datos-total-5.js"></script>
+  <script src="datos-total-6.js"></script>
+  <script src="datos-total-7.js"></script>
+  <script src="datos-total-8.js"></script>
+  <script src="datos-total-9.js"></script>
+  <script src="datos-total-10.js"></script>
+  <script src="datos-total-11.js"></script>
+  <script src="datos-total-12.js"></script>
+  <script src="datos-total-13.js"></script>
+  <script src="datos-total-14.js"></script>
+  <script src="datos-total-15.js"></script>
+  <script src="datos-total-16.js"></script>
+  <script src="datos-total-17.js"></script>
+  <script src="questions.js"></script>
+  <script src="game.js"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then((registration) => {
+            console.log('Service Worker registrado:', registration.scope);
+
+            // Comprobar actualizaciones
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // Nueva versión disponible
+                  if (confirm('Hay una nueva versión disponible. ¿Recargar para actualizar?')) {
+                    window.location.reload();
+                  }
+                }
+              });
+            });
+          })
+          .catch((error) => {
+            console.error('Error registrando Service Worker:', error);
+          });
+      });
+
+      // Escuchar mensajes del SW para actualizaciones
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }
+
+    // Detectar instalación PWA
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      console.log('PWA instalable disponible');
+    });
+
+    window.addEventListener('appinstalled', () => {
+      console.log('PWA instalada');
+      deferredPrompt = null;
+    });
+  </script>
+</body>
+</html>

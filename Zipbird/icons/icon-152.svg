@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#03070d"/>
+  <g transform="translate(120, 180)">
+    <rect x="0" y="40" width="24" height="16" fill="#d43a6a"/>
+    <rect x="8" y="56" width="24" height="16" fill="#b32f57"/>
+    <rect x="32" y="48" width="64" height="40" fill="#ff4f82"/>
+    <rect x="40" y="80" width="56" height="8" fill="#d43a6a"/>
+    <rect x="88" y="24" width="40" height="48" fill="#ff4f82"/>
+    <rect x="96" y="24" width="24" height="8" fill="#ff86a8"/>
+    <rect x="96" y="8" width="8" height="16" fill="#ff86a8"/>
+    <rect x="112" y="16" width="8" height="8" fill="#ff86a8"/>
+    <rect x="128" y="40" width="16" height="8" fill="#ffd23f"/>
+    <rect x="128" y="48" width="8" height="8" fill="#e0a81f"/>
+    <rect x="104" y="40" width="8" height="8" fill="#1a0710"/>
+    <g class="wing-up">
+      <rect x="64" y="32" width="8" height="16" fill="#ff86a8"/>
+      <rect x="64" y="16" width="24" height="16" fill="#ff86a8"/>
+      <rect x="80" y="8" width="16" height="8" fill="#ffb3c9"/>
+      <rect x="56" y="40" width="8" height="8" fill="#ff86a8"/>
+    </g>
+    <g class="wing-down">
+      <rect x="40" y="88" width="40" height="8" fill="#ff86a8"/>
+      <rect x="48" y="96" width="32" height="8" fill="#ff86a8"/>
+      <rect x="56" y="104" width="16" height="8" fill="#ffb3c9"/>
+    </g>
+  </g>
+</svg>

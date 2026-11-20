@@ -1,0 +1,471 @@
+/* ==========================================================
+   GENERADOR DEL BANCO DE PREGUNTAS
+   ----------------------------------------------------------
+   A partir de CATEGORIAS (datos-*.js) crea:
+     · la pregunta base      "nombra un color"
+     · variantes por inicial "nombra un color que empiece por A"
+     · variantes por final   "nombra un color que termine en O"
+     · variantes por letra   "nombra un color que lleve la letra R"
+     · variantes por largo   "nombra un color de 6 letras"
+
+   Las categorías con el mismo id se fusionan, así se pueden
+   añadir respuestas nuevas desde datos-completar.js sin
+   reescribir los archivos originales.
+
+   Cada respuesta conserva su nivel de rareza (10 a 100 puntos).
+   ========================================================== */
+
+var PREGUNTAS = (function () {
+  const NIVELES = ['muy-comun', 'poco-comun', 'raro', 'muy-raro', 'legendario'];
+  const PUNTOS = [10, 25, 45, 70, 100];
+
+  /* Categorías con lista cerrada y completa: en estas no hace
+     falta aceptar respuestas "libres" porque no falta ninguna. */
+  const CERRADAS = new Set([
+    'paises', 'paises-europa', 'paises-america', 'paises-asia',
+    'paises-africa', 'paises-oceania', 'paises-ue',
+    'capitales-europa', 'capitales-america', 'capitales-asia',
+    'capitales-africa', 'capitales-oceania',
+    'provincias', 'comunidades', 'estados-eeuu', 'estados-mexico',
+    'parques-nacionales', 'planetas', 'planetas-enanos',
+    'continentes', 'oceanos', 'equipos-nba',
+    'presidentes-espana', 'presidentes-eeuu'
+  ]);
+
+  function norm(t) {
+    return t
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/ñ/g, '\u0001')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\u0001/g, 'ñ')
+      .replace(/[^a-z0-9ñ ]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  const lista = [];
+  const vistos = new Set();
+  const indice = {};
+
+  function indexar(r, categoria) {
+    const formas = (r.alias && r.alias.length ? r.alias : [r.texto]).map(norm);
+    formas.forEach(function (n) {
+      if (!n) return;
+      if (!indice[n]) indice[n] = [];
+      if (indice[n].indexOf(categoria) === -1) indice[n].push(categoria);
+    });
+  }
+
+  function anadir(texto, respuestas, meta) {
+    const clave = texto.toLowerCase();
+    if (vistos.has(clave) || respuestas.length < 2) return;
+    vistos.add(clave);
+
+    const q = {
+      id: lista.length + 1,
+      texto: texto.charAt(0).toUpperCase() + texto.slice(1),
+      respuestas: respuestas
+    };
+
+    if (meta) {
+      q.categoria = meta.categoria;
+      q.tipo = meta.tipo;
+      q.filtro = meta.filtro || null;
+      q.abierta = !!meta.abierta;
+      respuestas.forEach(function (r) { indexar(r, meta.categoria); });
+    }
+
+    lista.push(q);
+  }
+
+  function preparar(crudo) {
+    const respuestas = [];
+    const usadas = new Set();
+
+    crudo.split('|').forEach(function (tier, i) {
+      const nivel = NIVELES[Math.min(i, NIVELES.length - 1)];
+      const puntos = PUNTOS[Math.min(i, PUNTOS.length - 1)];
+
+      tier.split(',').forEach(function (bruto) {
+        const item = bruto.trim();
+        if (!item) return;
+
+        const alias = item.split('~').map(function (s) { return s.trim(); }).filter(Boolean);
+        const clave = norm(alias[0]);
+        if (!clave || usadas.has(clave)) return;
+        usadas.add(clave);
+
+        respuestas.push({
+          texto: alias[0],
+          alias: alias,
+          clave: clave,
+          puntos: puntos,
+          nivel: nivel
+        });
+      });
+    });
+
+    return respuestas;
+  }
+
+  function agrupar(respuestas, obtenerClave) {
+    const grupos = {};
+    respuestas.forEach(function (r) {
+      const k = obtenerClave(r);
+      if (k === null || k === undefined || k === '') return;
+      (grupos[k] = grupos[k] || []).push(r);
+    });
+    return grupos;
+  }
+
+  /* ---------- 1 · fusionar categorías por id ---------- */
+  const mapa = new Map();
+
+  (window.CATEGORIAS || []).forEach(function (cat) {
+    const id = cat[0];
+    const titulo = cat[1];
+    const crudo = cat[2];
+
+    if (!mapa.has(id)) {
+      mapa.set(id, { id: id, titulo: titulo, tiers: [] });
+    }
+
+    const entrada = mapa.get(id);
+    crudo.split('|').forEach(function (tier, i) {
+      entrada.tiers[i] = entrada.tiers[i] ? entrada.tiers[i] + ',' + tier : tier;
+    });
+  });
+
+  window.__CATEGORIAS_UNICAS = mapa.size;
+
+  /* ---------- 1b · categorías de unión (reutilizan respuestas) ---------- */
+  const UNIONES = [
+    ['seres-vivos', 'un ser vivo',
+      ['animales', 'plantas', 'flores', 'arboles', 'setas', 'peces', 'aves', 'insectos', 'reptiles', 'felinos', 'razas-perro', 'razas-gato']],
+    ['animales-vertebrados', 'un animal vertebrado',
+      ['peces', 'aves', 'reptiles', 'felinos', 'razas-perro', 'razas-gato', 'animales-marinos', 'animales-salvajes', 'animales-granja']],
+    ['plantas-todas', 'una planta',
+      ['plantas', 'flores', 'arboles', 'setas', 'cactus', 'plantas-carnivoras', 'algas', 'arboles-frutales']],
+    ['comida-todas', 'una comida',
+      ['frutas', 'verduras', 'legumbres', 'cereales', 'carnes', 'pescados', 'mariscos', 'postres', 'dulces', 'panes', 'quesos', 'embutidos', 'sopas', 'arroces', 'pastas', 'comidas-espana', 'comidas-mundo', 'tapas']],
+    ['bebidas-todas', 'una bebida',
+      ['bebidas', 'cocteles', 'vinos', 'cervezas', 'cafes', 'infusiones']],
+    ['personajes-ficcion', 'un personaje de ficción',
+      ['personajes-big-bang', 'personajes-breaking-bad', 'personajes-casa-papel', 'personajes-dibujos', 'personajes-disney', 'personajes-harry-potter', 'personajes-juego-tronos', 'personajes-simpsons', 'personajes-star-wars', 'personajes-stranger-things', 'personajes-videojuegos', 'superheroes', 'superheroes-dc', 'superheroes-marvel', 'villanos', 'personajes-anime']],
+    ['peliculas-todas', 'una película',
+      ['peliculas-disney', 'peliculas-famosas', 'peliculas-pixar', 'peliculas-terror', 'peliculas-ciencia-ficcion', 'peliculas-accion', 'peliculas-comedia', 'peliculas-animacion', 'peliculas-oscar']],
+    ['series-todas', 'una serie',
+      ['series-espana', 'series-mundo', 'series-comedia', 'series-drama', 'series-policiacas', 'series-medicas', 'series-fantasia']],
+    ['videojuegos-todos', 'un videojuego',
+      ['videojuegos', 'sagas-videojuegos', 'videojuegos-nintendo', 'videojuegos-moviles']],
+    ['musicos-todos', 'un músico o grupo',
+      ['cantantes-espana', 'artistas-mundo', 'grupos-espana', 'grupos-musica', 'compositores']],
+    ['instrumentos-todos', 'un instrumento musical',
+      ['instrumentos', 'instrumentos-cuerda', 'instrumentos-percusion', 'instrumentos-viento']],
+    ['deportes-todos', 'un deporte',
+      ['deportes', 'deportes-olimpicos', 'deportes-agua', 'deportes-equipo', 'deportes-invierno', 'artes-marciales']],
+    ['capitales-todas', 'una capital',
+      ['capitales-europa', 'capitales-america', 'capitales-asia', 'capitales-africa', 'capitales-oceania']],
+    ['ciudades-todas', 'una ciudad',
+      ['ciudades-espana', 'ciudades-europa', 'ciudades-mundo', 'ciudades-francia', 'ciudades-italia', 'ciudades-alemania', 'ciudades-reino-unido', 'ciudades-eeuu', 'ciudades-mexico', 'ciudades-argentina', 'ciudades-brasil', 'ciudades-china', 'ciudades-japon', 'ciudades-india', 'ciudades-africa', 'ciudades-oceania']],
+    ['rios-todos', 'un río',
+      ['rios-espana', 'rios-mundo', 'rios-europa', 'rios-america', 'rios-asia', 'rios-africa']],
+    ['montanas-todas', 'una montaña o cordillera',
+      ['montanas-espana', 'montanas-mundo', 'montanas-mundo-2']],
+    ['monumentos-todos', 'un monumento',
+      ['monumentos-espana', 'monumentos-mundo']],
+    ['marcas-todas', 'una marca',
+      ['marcas-espana', 'marcas-coches', 'marcas-moto', 'marcas-ropa', 'marcas-tecnologia']],
+    ['animales-domesticos-todos', 'un animal doméstico',
+      ['animales-granja', 'razas-perro', 'razas-gato']],
+    ['animales-voladores-todos', 'un animal que vuela',
+      ['aves', 'animales-voladores']],
+    ['arboles-todos', 'un árbol',
+      ['arboles', 'arboles-frutales']],
+    ['flores-plantas', 'una flor o planta',
+      ['flores', 'plantas', 'plantas-carnivoras', 'cactus']],
+    ['rocas-minerales', 'un mineral o roca',
+      ['rocas', 'minerales']],
+    ['unidades-todas', 'una unidad de medida',
+      ['unidades-medida', 'unidades-si']],
+    ['inventos-todos', 'un invento o descubrimiento',
+      ['inventos', 'descubrimientos']],
+    ['dioses-todos', 'un dios',
+      ['dioses-griegos', 'dioses-egipcios', 'dioses-nordicos', 'dioses-romanos', 'dioses-hindues']],
+    ['criaturas-todas', 'una criatura mitológica',
+      ['criaturas-mitologicas', 'titanes', 'heroes-mitologicos']],
+    ['fiestas-todas', 'una fiesta',
+      ['fiestas-espana', 'fiestas-mundo']],
+    ['equipos-futbol-todos', 'un equipo de fútbol',
+      ['equipos-futbol', 'equipos-laliga', 'equipos-premier', 'equipos-seriea', 'equipos-bundesliga', 'equipos-ligue1']],
+    ['transportes-todos', 'un medio de transporte',
+      ['transportes', 'vehiculos']],
+    ['muebles-electrodomesticos', 'un mueble o electrodoméstico',
+      ['muebles', 'electrodomesticos']],
+    ['cocina-todos', 'un utensilio de cocina',
+      ['utensilios-cocina', 'electrodomesticos']],
+    ['ropa-calzado', 'una prenda o calzado',
+      ['prendas', 'calzado']],
+    ['huesos-organos', 'un hueso u órgano',
+      ['huesos', 'organos']],
+    ['enfermedades-todas', 'una enfermedad',
+      ['enfermedades', 'virus', 'bacterias']],
+    ['animales-marinos-todos', 'un animal marino',
+      ['animales-marinos', 'peces', 'mariscos', 'cetaceos', 'crustaceos', 'moluscos']],
+    ['animales-salvajes-todos', 'un animal salvaje',
+      ['animales-salvajes', 'felinos', 'canidos', 'primates', 'reptiles', 'aves']],
+    ['postres-todos', 'un postre o dulce',
+      ['postres', 'dulces', 'panes', 'quesos']],
+    ['profesiones-todas', 'una profesión',
+      ['profesiones', 'oficios']]
+  ];
+
+  UNIONES.forEach(function (u) {
+    const tiers = ['', '', '', '', ''];
+    let hay = false;
+    u[2].forEach(function (fid) {
+      const fuente = mapa.get(fid);
+      if (!fuente) return;
+      fuente.tiers.forEach(function (t, i) {
+        if (t && t.trim()) {
+          tiers[i] = tiers[i] ? tiers[i] + ',' + t : t;
+          hay = true;
+        }
+      });
+    });
+    if (hay) mapa.set(u[0], { id: u[0], titulo: u[1], tiers: tiers });
+  });
+
+  window.__CATEGORIAS_UNICAS = mapa.size;
+
+  /* ---------- 2 · generar preguntas ---------- */
+  mapa.forEach(function (cat) {
+    const id = cat.id;
+    const titulo = cat.titulo;
+    const respuestas = preparar(cat.tiers.join('|'));
+    if (respuestas.length < 3) return;
+
+    const abierta = !CERRADAS.has(id);
+
+    /* pregunta base: todas las respuestas registradas */
+    anadir('nombra ' + titulo, respuestas, {
+      categoria: id, tipo: 'base', abierta: false
+    });
+
+    /* por letra inicial */
+    const porInicial = agrupar(respuestas, function (r) {
+      const l = r.clave.charAt(0);
+      return /[a-zñ]/.test(l) ? l : null;
+    });
+    Object.keys(porInicial).forEach(function (l) {
+      if (porInicial[l].length >= 5) {
+        anadir('nombra ' + titulo + ' que empiece por ' + l.toUpperCase(), porInicial[l], {
+          categoria: id, tipo: 'inicial', filtro: { tipo: 'inicial', valor: l }, abierta: abierta
+        });
+      }
+    });
+
+    /* por letra final */
+    const porFinal = agrupar(respuestas, function (r) {
+      const l = r.clave.charAt(r.clave.length - 1);
+      return /[a-zñ]/.test(l) ? l : null;
+    });
+    Object.keys(porFinal).forEach(function (l) {
+      if (porFinal[l].length >= 5) {
+        anadir('nombra ' + titulo + ' que termine en ' + l.toUpperCase(), porFinal[l], {
+          categoria: id, tipo: 'final', filtro: { tipo: 'final', valor: l }, abierta: abierta
+        });
+      }
+    });
+
+    /* por letra contenida (solo si restringe de verdad) */
+    const total = respuestas.length;
+    const letras = 'abcdefghijklmnñopqrstuvwxyz'.split('');
+    letras.forEach(function (l) {
+      const grupo = respuestas.filter(function (r) { return r.clave.indexOf(l) !== -1; });
+      const proporcion = grupo.length / total;
+      if (grupo.length >= 6 && proporcion <= 0.5) {
+        anadir('nombra ' + titulo + ' que lleve la letra ' + l.toUpperCase(), grupo, {
+          categoria: id, tipo: 'contiene', filtro: { tipo: 'contiene', valor: l }, abierta: abierta
+        });
+      }
+    });
+
+    /* por número de letras (solo respuestas de una palabra) */
+    const porLargo = agrupar(respuestas, function (r) {
+      if (r.clave.indexOf(' ') !== -1) return null;
+      const n = r.clave.length;
+      return n >= 3 && n <= 14 ? String(n) : null;
+    });
+    Object.keys(porLargo).forEach(function (n) {
+      if (porLargo[n].length >= 5) {
+        anadir('nombra ' + titulo + ' de ' + n + ' letras', porLargo[n], {
+          categoria: id, tipo: 'largo', filtro: { tipo: 'largo', valor: Number(n) }, abierta: abierta
+        });
+      }
+    });
+
+    /* por letras que NO lleva (aumenta variedad y dificultad) */
+    const NEGADAS = ['a', 'e', 'i', 'o', 'u', 's'];
+    NEGADAS.forEach(function (l) {
+      const grupo = respuestas.filter(function (r) { return r.clave.indexOf(l) === -1; });
+      if (grupo.length >= 5) {
+        anadir('nombra ' + titulo + ' que no lleve la letra ' + l.toUpperCase(), grupo, {
+          categoria: id, tipo: 'no-contiene', filtro: { tipo: 'no-contiene', valor: l }, abierta: abierta
+        });
+      }
+    });
+
+    /* por vocal inicial o final */
+    const porVocalInicial = respuestas.filter(function (r) { return /^[aeiou]/.test(r.clave); });
+    if (porVocalInicial.length >= 5) {
+      anadir('nombra ' + titulo + ' que empiece por vocal', porVocalInicial, {
+        categoria: id, tipo: 'inicial-vocal', filtro: { tipo: 'inicial-vocal' }, abierta: abierta
+      });
+    }
+
+    const porVocalFinal = respuestas.filter(function (r) { return /[aeiou]$/.test(r.clave); });
+    if (porVocalFinal.length >= 5) {
+      anadir('nombra ' + titulo + ' que termine en vocal', porVocalFinal, {
+        categoria: id, tipo: 'final-vocal', filtro: { tipo: 'final-vocal' }, abierta: abierta
+      });
+    }
+
+    /* por longitud total (contando también respuestas de varias palabras) */
+    const porLargoTotal = respuestas.filter(function (r) {
+      return r.clave.replace(/ /g, '').length > 8;
+    });
+    if (porLargoTotal.length >= 5) {
+      anadir('nombra ' + titulo + ' de más de 8 letras', porLargoTotal, {
+        categoria: id, tipo: 'largo-mayor', filtro: { tipo: 'largo-mayor', valor: 8 }, abierta: abierta
+      });
+    }
+
+    const porCortoTotal = respuestas.filter(function (r) {
+      return r.clave.replace(/ /g, '').length < 7;
+    });
+    if (porCortoTotal.length >= 5) {
+      anadir('nombra ' + titulo + ' de menos de 7 letras', porCortoTotal, {
+        categoria: id, tipo: 'largo-menor', filtro: { tipo: 'largo-menor', valor: 7 }, abierta: abierta
+      });
+    }
+  });
+
+  /* ---------- 3 · preguntas especiales ---------- */
+  const CURIOSAS = [
+    ['nombra una fruta que sea roja por dentro',
+      'sandía|fresa|granada|pitahaya|grosella'],
+    ['nombra un animal que ponga huevos',
+      'gallina,pato,tortuga|avestruz,serpiente,pingüino|cocodrilo,rana,abeja|ornitorrinco,equidna,tiburón|erizo de mar,caracol,mariposa'],
+    ['nombra un objeto que sea redondo',
+      'pelota,rueda,plato,reloj,moneda|aro,botón,globo,espejo,tapón|tambor,embudo,imán,cuenco,medalla|anillo,lente,timón,volante,balón|brújula,peonza,yoyó,rosquilla,diana'],
+    ['nombra un animal que viva en el desierto',
+      'camello,dromedario,serpiente,escorpión|lagarto,zorro fenec,tortuga,escarabajo|hiena,chacal,jerbo,lagartija|saiga,diablo espinoso,gila,varano|topo dorado,fennec,araña camello,eslizón'],
+    ['nombra un superhéroe que vuele',
+      'superman,iron man,thor,mujer maravilla|linterna verde,silver surfer,storm,falcon|shazam,visión,supergirl,estela plateada|nova,firestorm,ángel,halcón|capitana marvel,martian manhunter,blue marvel,sentry']
+  ];
+
+  CURIOSAS.forEach(function (c) {
+    anadir(c[0], preparar(c[1]));
+  });
+
+  /* ---------- 4 · dificultad de cada pregunta ----------
+     Se combinan tres cosas:
+       · el tipo de pregunta (una base es más fácil que
+         "que lleve la letra Z")
+       · la rareza media de sus respuestas
+       · cuántas respuestas admite (más respuestas = más fácil)
+
+     Después se usan umbrales, no tercios: así "fácil" no
+     recibe nunca preguntas de letra contenida ni de letra
+     prohibida, que son las que más cuestan. */
+  const PESO_TIPO = {
+    'base': 0,
+    'inicial': 1,
+    'final': 1,
+    'inicial-vocal': 1,
+    'final-vocal': 1,
+    'largo': 2,
+    'largo-mayor': 2.2,
+    'largo-menor': 2.2,
+    'contiene': 1.8,
+    'no-contiene': 3
+  };
+
+  const UMBRAL_FACIL = 1.2;
+  const UMBRAL_DIFICIL = 3.0;
+  const UMBRAL_DURO_DIFICIL = 3.4;
+
+  lista.forEach(function (q) {
+    const n = q.respuestas.length;
+    let suma = 0;
+    q.respuestas.forEach(function (r) { suma += r.puntos; });
+
+    const rareza = Math.max(0, Math.min(1, (suma / n - 10) / 90));
+    const escasez = Math.max(0, Math.min(1, (25 - n) / 25));
+    const peso = PESO_TIPO[q.tipo] === undefined ? 0.5 : PESO_TIPO[q.tipo];
+
+    q.pesoDificultad = peso + rareza * 2.0 + escasez * 1.0;
+
+    /* las variantes de letra contenida o prohibida nunca son
+       "fáciles": como mínimo van a nivel medio */
+    const restriccionDura = q.tipo === 'contiene' || q.tipo === 'no-contiene';
+    if (restriccionDura) {
+      q.dificultad = q.pesoDificultad >= UMBRAL_DURO_DIFICIL ? 'dificil' : 'media';
+    } else if (q.pesoDificultad < UMBRAL_FACIL) {
+      q.dificultad = 'facil';
+    } else if (q.pesoDificultad >= UMBRAL_DIFICIL) {
+      q.dificultad = 'dificil';
+    } else {
+      q.dificultad = 'media';
+    }
+
+    /* Garantía: preguntas tipo base con respuestas muy comunes y
+       suficientes opciones son siempre fáciles */
+    if (q.tipo === 'base' && rareza < 0.2 && n >= 5) {
+      q.dificultad = 'facil';
+      q.pesoDificultad = Math.min(q.pesoDificultad, UMBRAL_FACIL - 0.1);
+    }
+
+    /* Garantía: preguntas con muchas respuestas (≥15) y rareza baja son fáciles */
+    if (n >= 15 && rareza < 0.3) {
+      q.dificultad = 'facil';
+      q.pesoDificultad = Math.min(q.pesoDificultad, UMBRAL_FACIL - 0.1);
+    }
+  });
+
+  window.PREGUNTAS_DIFICULTAD = {
+    facil: lista.filter(function (q) { return q.dificultad === 'facil'; }),
+    media: lista.filter(function (q) { return q.dificultad === 'media'; }),
+    dificil: lista.filter(function (q) { return q.dificultad === 'dificil'; })
+  };
+
+  /* índice global: respuesta normalizada -> categorías donde aparece */
+  window.INDICE_RESPUESTAS = indice;
+
+  return lista;
+})();
+
+/* Datos informativos para la interfaz */
+var BANCO_INFO = (function () {
+  let respuestas = 0;
+  const unicas = new Set();
+  PREGUNTAS.forEach(function (p) {
+    respuestas += p.respuestas.length;
+    p.respuestas.forEach(function (r) { unicas.add(r.clave); });
+  });
+  return {
+    preguntas: PREGUNTAS.length,
+    respuestas: respuestas,
+    unicas: unicas.size,
+    categorias: window.__CATEGORIAS_UNICAS || 0,
+    dificultad: {
+      facil: (window.PREGUNTAS_DIFICULTAD || {}).facil ? window.PREGUNTAS_DIFICULTAD.facil.length : 0,
+      media: (window.PREGUNTAS_DIFICULTAD || {}).media ? window.PREGUNTAS_DIFICULTAD.media.length : 0,
+      dificil: (window.PREGUNTAS_DIFICULTAD || {}).dificil ? window.PREGUNTAS_DIFICULTAD.dificil.length : 0
+    }
+  };
+})();

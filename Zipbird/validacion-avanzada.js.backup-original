@@ -1,0 +1,621 @@
+/* ==========================================================
+   ZIPBIRD - Sistema de Validación Avanzado
+   Reemplaza buscarRespuesta con fuzzy matching inteligente
+   ========================================================== */
+
+/**
+ * Clase principal del sistema de validación
+ * Maneja: normalización, fuzzy matching, alias, rareza, logging de rechazadas
+ */
+class SistemaValidacion {
+  constructor() {
+    this.rechazadas = this.cargarRechazadas();
+    this.cacheNormalizado = new Map();
+    this.cacheFuzzy = new Map();
+  }
+
+  /* ==========================================================
+     NORMALIZACIÓN
+     ========================================================== */
+
+  /**
+   * Normalización estándar: minúsculas, sin acentos, sin artículos, espacios limpios
+   */
+  normalizar(texto) {
+    if (!texto) return '';
+    const cacheKey = `norm:${texto}`;
+    if (this.cacheNormalizado.has(cacheKey)) return this.cacheNormalizado.get(cacheKey);
+
+    const resultado = texto
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/ñ/g, '\u0001')
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/\u0001/g, 'ñ')
+      .replace(/[^a-z0-9ñ ]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .replace(/^(el|la|los|las|un|una|unos|unas) /, '');
+
+    this.cacheNormalizado.set(cacheKey, resultado);
+    return resultado;
+  }
+
+  /**
+   * Normalización agresiva para fuzzy matching: sin espacios, sin guiones, solo alfanumérico+ñ
+   */
+  normalizarFuzzy(texto) {
+    if (!texto) return '';
+    const cacheKey = `fuzzy:${texto}`;
+    if (this.cacheFuzzy.has(cacheKey)) return this.cacheFuzzy.get(cacheKey);
+
+    const resultado = this.normalizar(texto)
+      .replace(/[^a-z0-9ñ]/g, '')
+      .trim();
+
+    this.cacheFuzzy.set(cacheKey, resultado);
+    return resultado;
+  }
+
+  /**
+   * Genera variantes morfológicas: singular/plural, -z/-ces, etc.
+   */
+  variantes(palabra) {
+    if (!palabra) return new Set();
+    const set = new Set([palabra]);
+    if (palabra.length > 4 && palabra.endsWith('ces')) set.add(palabra.slice(0, -3) + 'z');
+    if (palabra.length > 4 && palabra.endsWith('es')) set.add(palabra.slice(0, -2));
+    if (palabra.length > 3 && palabra.endsWith('s')) set.add(palabra.slice(0, -1));
+    set.add(palabra + 's');
+    if (palabra.endsWith('z')) set.add(palabra.slice(0, -1) + 'ces');
+    return set;
+  }
+
+  /* ==========================================================
+     ALGORITMOS DE SIMILITUD
+     ========================================================== */
+
+  /**
+   * Jaro-Winkler similarity (0-1, donde 1 = idéntico)
+   * Boost para prefijos comunes (hasta 4 caracteres)
+   */
+  jaroWinkler(s1, s2) {
+    if (s1 === s2) return 1.0;
+    const len1 = s1.length, len2 = s2.length;
+    if (len1 === 0 || len2 === 0) return 0.0;
+
+    const matchWindow = Math.floor(Math.max(len1, len2) / 2) - 1;
+    const s1Matches = new Array(len1).fill(false);
+    const s2Matches = new Array(len2).fill(false);
+
+    let matches = 0;
+    for (let i = 0; i < len1; i++) {
+      const start = Math.max(0, i - matchWindow);
+      const end = Math.min(i + matchWindow + 1, len2);
+      for (let j = start; j < end; j++) {
+        if (s2Matches[j] || s1[i] !== s2[j]) continue;
+        s1Matches[i] = s2Matches[j] = true;
+        matches++;
+        break;
+      }
+    }
+    if (matches === 0) return 0.0;
+
+    let transpositions = 0;
+    let k = 0;
+    for (let i = 0; i < len1; i++) {
+      if (!s1Matches[i]) continue;
+      while (!s2Matches[k]) k++;
+      if (s1[i] !== s2[k]) transpositions++;
+      k++;
+    }
+    transpositions /= 2;
+
+    let jaro = (matches / len1 + matches / len2 + (matches - transpositions) / matches) / 3;
+
+    // Winkler boost for common prefix (up to 4 chars)
+    let prefix = 0;
+    for (let i = 0; i < Math.min(len1, len2, 4); i++) {
+      if (s1[i] === s2[i]) prefix++;
+      else break;
+    }
+    return jaro + 0.1 * prefix * (1 - jaro);
+  }
+
+  /**
+   * Distancia Levenshtein-Damerau (con transposiciones)
+   * Early exit si la diferencia de longitud supera umbral
+   */
+  distanciaLevenshtein(a, b) {
+    if (!a || !b) return Math.max(a?.length || 0, b?.length || 0);
+    const m = a.length, n = b.length;
+    if (Math.abs(m - n) > 4) return 99; // early exit
+
+    const d = [];
+    for (let i = 0; i <= m; i++) {
+      d[i] = [i];
+      for (let j = 1; j <= n; j++) d[i][j] = i === 0 ? j : 0;
+    }
+
+    for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+        const coste = a[i - 1] === b[j - 1] ? 0 : 1;
+        d[i][j] = Math.min(
+          d[i - 1][j] + 1,      // deletion
+          d[i][j - 1] + 1,      // insertion
+          d[i - 1][j - 1] + coste // substitution
+        );
+        // transposition (Damerau)
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+          d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+        }
+      }
+    }
+    return d[m][n];
+  }
+
+  /* ==========================================================
+     UMBRALES DINÁMICOS SEGÚN LONGITUD
+     ========================================================== */
+
+  /**
+   * Umbral de distancia Levenshtein según longitud de la palabra objetivo
+   * - ≤4: 1
+   * - 5-7: 1
+   * - 8-10: 2
+   * - >10: 3
+   */
+  umbralDistancia(longitud) {
+    if (longitud <= 4) return 1;
+    if (longitud <= 7) return 1;
+    if (longitud <= 10) return 2;
+    return 3;
+  }
+
+  /**
+   * Umbral de Jaro-Winkler según longitud
+   * - ≤4: 0.95
+   * - 5-7: 0.90
+   * - 8-10: 0.87
+   * - >10: 0.84
+   */
+  umbralJaro(longitud) {
+    if (longitud <= 4) return 0.95;
+    if (longitud <= 7) return 0.90;
+    if (longitud <= 10) return 0.87;
+    return 0.84;
+  }
+
+  /* ==========================================================
+     MATCHING PARCIAL / ABREVIADO
+     ========================================================== */
+
+  /**
+   * Verifica si una respuesta parcial es inequívoca
+   * "globo" → "pez globo" SÍ (si no hay otra respuesta que empiece/contenga "globo")
+   * "leon" → "leon marino" NO si existe "leon" como respuesta aparte
+   */
+  esParcialValida(parcial, objetivo, todasRespuestas) {
+    if (!parcial || parcial.length < 4) return false;
+    if (parcial === objetivo) return false; // ya es exacta
+
+    let coincidencias = 0;
+    let respuestaCoincidente = null;
+
+    for (const r of todasRespuestas) {
+      const alias = r.alias || [r.texto];
+      for (const a of alias) {
+        const n = this.normalizar(a);
+        if (!n) continue;
+        const palabras = n.split(' ');
+        for (const p of palabras) {
+          // Coincide si la palabra empieza con la parcial O es igual a la parcial
+          if (p.startsWith(parcial) || p === parcial) {
+            coincidencias++;
+            respuestaCoincidente = r;
+            break;
+          }
+        }
+        if (coincidencias > 1) return false; // ambigua: más de una respuesta coincide
+      }
+    }
+    return coincidencias === 1 ? respuestaCoincidente : false;
+  }
+
+  /* ==========================================================
+     BÚSQUEDA POR ÚLTIMA PALABRA (apellido, nombre compuesto)
+     ========================================================== */
+
+  /**
+   * Acepta "miró" para "Joan Miró" o "merkel" para "Angela Merkel"
+   * SOLO si esa última palabra identifica a una única respuesta
+   */
+  buscarPorUltimaPalabra(pregunta, objetivo) {
+    if (!objetivo || objetivo.indexOf(' ') !== -1 || objetivo.length < 4) return null;
+
+    const formas = this.variantes(objetivo);
+    let encontrada = null;
+    let repetida = false;
+
+    for (const r of pregunta.respuestas) {
+      const alias = r.alias || [r.texto];
+      for (const a of alias) {
+        const n = this.normalizar(a);
+        if (!n || n.indexOf(' ') === -1) continue;
+        const partes = n.split(' ');
+        const ultima = partes[partes.length - 1];
+        if (ultima.length < 4) continue;
+        const suyas = this.variantes(ultima);
+        let coincide = false;
+        for (const v of suyas) {
+          if (formas.has(v)) { coincide = true; break; }
+        }
+        if (!coincide) continue;
+        if (encontrada && encontrada.clave !== r.clave) repetida = true;
+        else encontrada = r;
+      }
+    }
+
+    return repetida ? null : encontrada;
+  }
+
+  /* ==========================================================
+     BÚSQUEDA APROXIMADA MEJORADA (Jaro-Winkler + Levenshtein)
+     ========================================================== */
+
+  /**
+   * Búsqueda fuzzy combinada: debe pasar AMBOS filtros para evitar falsos positivos
+   * Retorna la respuesta con metadata { corregida: true, original: string }
+   */
+  buscarAproximadaMejorada(pregunta, objetivo, objetivoFuzzy, original) {
+    if (!objetivo || objetivo.length < 4) return null;
+
+    const umbralLev = this.umbralDistancia(objetivo.length);
+    const umbralJW = this.umbralJaro(objetivo.length);
+    const inicial = objetivo.charAt(0);
+
+    let mejor = null;
+    let mejorLev = 99;
+    let mejorScore = -1;
+    let empate = false;
+
+    for (const r of pregunta.respuestas) {
+      const alias = r.alias || [r.texto];
+      for (const a of alias) {
+        const n = this.normalizar(a);
+        const nFuzzy = this.normalizarFuzzy(n);
+        if (!n || n.charAt(0) !== inicial) return null; // filtro por inicial para rendimiento y precisión
+        if (Math.abs(n.length - objetivo.length) > umbralLev + 1) continue;
+
+        const d = this.distanciaLevenshtein(objetivo, n);
+        const jw = this.jaroWinkler(objetivoFuzzy, nFuzzy);
+
+        const pasaLev = d <= umbralLev;
+        const pasaJW = jw >= umbralJW;
+
+        if (!pasaLev && !pasaJW) continue;
+
+        // Score combinado: prioriza Levenshtein exacto, usa JW como desempate
+        const score = pasaLev ? (100 - d * 10 + jw * 10) : (jw * 50);
+
+        if (score > mejorScore || (score === mejorScore && d < mejorLev)) {
+          mejor = r;
+          mejorLev = d;
+          mejorScore = score;
+          empate = false;
+        } else if (score === mejorScore && mejor && r.clave !== mejor.clave) {
+          empate = true;
+        }
+      }
+    }
+
+    if (!mejor || empate) return null;
+
+    // Verificación extra de seguridad: evitar falsos positivos entre conceptos distintos
+    // (ej: "leon" no debe coincidir con "tigre" aunque tengan distancia similar)
+    const aliasMejor = mejor.alias || [mejor.texto];
+    let coincidenciaSegura = false;
+    for (const a of aliasMejor) {
+      const n = this.normalizar(a);
+      const nFuzzy = this.normalizarFuzzy(n);
+      const d = this.distanciaLevenshtein(objetivo, n);
+      const jw = this.jaroWinkler(objetivoFuzzy, nFuzzy);
+      if (d <= umbralLev && jw >= umbralJW) {
+        coincidenciaSegura = true;
+        break;
+      }
+    }
+
+    if (!coincidenciaSegura) return null;
+
+    return Object.assign({}, mejor, { corregida: true, original: original });
+  }
+
+  /* ==========================================================
+     FUNCIÓN PRINCIPAL DE VALIDACIÓN
+     ========================================================== */
+
+  /**
+   * Punto de entrada principal - reemplaza buscarRespuesta
+   * @param {Object} pregunta - Objeto pregunta con .respuestas[]
+   * @param {string} respuestaUsuario - Texto ingresado por el usuario
+   * @returns {Object|null} - Respuesta coincidente con metadata o null
+   */
+  buscarRespuestaAvanzada(pregunta, respuestaUsuario) {
+    if (!pregunta || !pregunta.respuestas || !respuestaUsuario) return null;
+
+    const objetivo = this.normalizar(respuestaUsuario);
+    if (!objetivo) return null;
+
+    const formas = this.variantes(objetivo);
+    const objetivoFuzzy = this.normalizarFuzzy(objetivo);
+
+    /* 1 · Coincidencia exacta (con plurales, artículos, alias) */
+    for (const r of pregunta.respuestas) {
+      const alias = r.alias || [r.texto];
+      for (const a of alias) {
+        const n = this.normalizar(a);
+        if (!n) continue;
+        if (formas.has(n)) return r;
+        const suyas = this.variantes(n);
+        for (const v of suyas) {
+          if (formas.has(v)) return r;
+        }
+      }
+    }
+
+    /* 1b · Apellido o última palabra de nombre compuesto */
+    const porApellido = this.buscarPorUltimaPalabra(pregunta, objetivo);
+    if (porApellido) return porApellido;
+
+    /* 1c · Respuesta parcial inequívoca (ej: "globo" para "pez globo") */
+    const parcial = this.esParcialValida(objetivo, objetivo, pregunta.respuestas);
+    if (parcial) return parcial;
+
+    /* 2 · Fuzzy matching inteligente: Jaro-Winkler + Levenshtein combinados */
+    const aproximada = this.buscarAproximadaMejorada(pregunta, objetivo, objetivoFuzzy, respuestaUsuario);
+    if (aproximada) return aproximada;
+
+    /* 3 · Respuesta libre para categorías abiertas (variantes por inicial, final, etc.)
+       Si la pregunta tiene abierta=true y no se encontró en la lista predefinida,
+       aceptamos cualquier respuesta válida que cumpla el filtro de la pregunta. */
+    if (pregunta.abierta) {
+      const respuestaLibre = this.validarRespuestaLibre(pregunta, objetivo, respuestaUsuario);
+      if (respuestaLibre) return respuestaLibre;
+    }
+
+    /* 4 · Registrar respuesta rechazada para aprendizaje */
+    this.registrarRechazada(pregunta, respuestaUsuario);
+
+    return null;
+  }
+
+  /**
+   * Valida una respuesta libre para preguntas abiertas
+   * Verifica que cumpla el filtro de la pregunta (inicial, final, contiene, largo, etc.)
+   * @returns {Object|null} Objeto respuesta con libre=true o null si no válida
+   */
+  validarRespuestaLibre(pregunta, objetivo, original) {
+    // Validación básica: longitud mínima y solo caracteres válidos
+    if (objetivo.length < 2) return null;
+    if (!/^[a-z0-9ñ\s]+$/.test(objetivo)) return null;
+
+    const filtro = pregunta.filtro;
+    const tipo = pregunta.tipo;
+
+    // Verificar filtro según tipo de pregunta
+    if (filtro) {
+      switch (filtro.tipo) {
+        case 'inicial':
+          if (objetivo.charAt(0) !== filtro.valor) return null;
+          break;
+        case 'inicial-vocal':
+          if (!/^[aeiou]/.test(objetivo)) return null;
+          break;
+        case 'final':
+          if (objetivo.charAt(objetivo.length - 1) !== filtro.valor) return null;
+          break;
+        case 'final-vocal':
+          if (!/[aeiou]$/.test(objetivo)) return null;
+          break;
+        case 'contiene':
+          if (!objetivo.includes(filtro.valor)) return null;
+          break;
+        case 'no-contiene':
+          if (objetivo.includes(filtro.valor)) return null;
+          break;
+        case 'largo':
+        case 'largo-mayor':
+        case 'largo-menor':
+          const largoSinEspacios = objetivo.replace(/\s/g, '').length;
+          if (filtro.tipo === 'largo' && largoSinEspacios !== filtro.valor) return null;
+          if (filtro.tipo === 'largo-mayor' && largoSinEspacios <= filtro.valor) return null;
+          if (filtro.tipo === 'largo-menor' && largoSinEspacios >= filtro.valor) return null;
+          break;
+      }
+    }
+
+    // Asignar rareza por defecto para respuestas libres (poco-comun = 25 pts)
+    // Podría variar según tipo de pregunta, pero mantenemos simple
+    const rarezaDefecto = 'poco-comun';
+    const puntosDefecto = 25;
+
+    return {
+      texto: original.trim(),
+      alias: [original.trim()],
+      clave: objetivo,
+      puntos: puntosDefecto,
+      nivel: rarezaDefecto,
+      libre: true,
+      original: original
+    };
+  }
+
+  /* ==========================================================
+     SISTEMA DE APRENDIZAJE - RESPUESTAS RECHAZADAS
+     ========================================================== */
+
+  /**
+   * Carga las respuestas rechazadas desde localStorage
+   */
+  cargarRechazadas() {
+    try {
+      return JSON.parse(localStorage.getItem('respuestas_rechazadas') || '{}');
+    } catch (e) {
+      console.warn('Error cargando rechazadas:', e);
+      return {};
+    }
+  }
+
+  /**
+   * Registra una respuesta rechazada con contexto de pregunta
+   * Incrementa contador, guarda original, fecha, texto de pregunta
+   */
+  registrarRechazada(pregunta, respuestaUsuario) {
+    try {
+      const key = 'respuestas_rechazadas';
+      const norm = this.normalizar(respuestaUsuario);
+      if (!norm) return;
+
+      const pid = pregunta.id || pregunta.categoria || 'desconocida';
+
+      if (!this.rechazadas[pid]) this.rechazadas[pid] = {};
+      this.rechazadas[pid][norm] = (this.rechazadas[pid][norm] || 0) + 1;
+      this.rechazadas[pid][norm + '_original'] = respuestaUsuario.trim();
+      this.rechazadas[pid][norm + '_fecha'] = Date.now();
+      this.rechazadas[pid][norm + '_pregunta'] = pregunta.texto;
+
+      localStorage.setItem(key, JSON.stringify(this.rechazadas));
+    } catch (e) {
+      console.warn('No se pudo guardar respuesta rechazada:', e);
+    }
+  }
+
+  /**
+   * Obtiene todas las respuestas rechazadas para revisión manual
+   * @returns {Object} Estructura: { preguntaId: { respuestaNorm: { count, original, fecha, pregunta } } }
+   */
+  obtenerRechazadas() {
+    try {
+      return JSON.parse(localStorage.getItem('respuestas_rechazadas') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  /**
+   * Obtiene rechazadas de una pregunta específica
+   */
+  obtenerRechazadasPregunta(preguntaId) {
+    return this.rechazadas[preguntaId] || {};
+  }
+
+  /**
+   * Limpia todas las rechazadas (para testing o reset)
+   */
+  limpiarRechazadas() {
+    this.rechazadas = {};
+    localStorage.removeItem('respuestas_rechazadas');
+  }
+
+  /**
+   * Obtiene estadísticas de rechazadas para dashboard de aprendizaje
+   */
+  obtenerEstadisticasRechazadas() {
+    const data = this.obtenerRechazadas();
+    let totalRechazadas = 0;
+    let totalIntentos = 0;
+    const porPregunta = {};
+
+    for (const [pid, respuestas] of Object.entries(data)) {
+      let countPregunta = 0;
+      for (const [norm, valor] of Object.entries(respuestas)) {
+        if (norm.endsWith('_original') || norm.endsWith('_fecha') || norm.endsWith('_pregunta')) continue;
+        totalIntentos += valor;
+        countPregunta += valor;
+        totalRechazadas++;
+      }
+      if (countPregunta > 0) porPregunta[pid] = countPregunta;
+    }
+
+    return {
+      totalRespuestasUnicas: totalRechazadas,
+      totalIntentos,
+      porPregunta,
+      topRechazadas: Object.entries(porPregunta)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 20)
+    };
+  }
+
+  /* ==========================================================
+     UTILIDADES DE EXPORTACIÓN/IMPORTACIÓN
+     ========================================================== */
+
+  /**
+   * Exporta la base de rechazadas para backup/análisis externo
+   */
+  exportarRechazadas() {
+    return JSON.stringify(this.rechazadas, null, 2);
+  }
+
+  /**
+   * Importa rechazadas desde JSON (para migración o merge)
+   */
+  importarRechazadas(jsonString) {
+    try {
+      const data = JSON.parse(jsonString);
+      this.rechazadas = data;
+      localStorage.setItem('respuestas_rechazadas', JSON.stringify(data));
+      return true;
+    } catch (e) {
+      console.error('Error importando rechazadas:', e);
+      return false;
+    }
+  }
+}
+
+/* ==========================================================
+   INSTANCIA GLOBAL Y FUNCIONES DE COMPATIBILIDAD
+   ========================================================== */
+
+// Instancia singleton
+const sistemaValidacion = new SistemaValidacion();
+
+// Funciones de compatibilidad con código existente
+function normalizar(texto) { return sistemaValidacion.normalizar(texto); }
+function normalizarFuzzy(texto) { return sistemaValidacion.normalizarFuzzy(texto); }
+function variantes(palabra) { return sistemaValidacion.variantes(palabra); }
+function jaroWinkler(s1, s2) { return sistemaValidacion.jaroWinkler(s1, s2); }
+function distanciaLevenshtein(a, b) { return sistemaValidacion.distanciaLevenshtein(a, b); }
+function umbralDistancia(longitud) { return sistemaValidacion.umbralDistancia(longitud); }
+function umbralJaro(longitud) { return sistemaValidacion.umbralJaro(longitud); }
+function esParcialValida(parcial, objetivo, todasRespuestas) { return sistemaValidacion.esParcialValida(parcial, objetivo, todasRespuestas); }
+function buscarRespuestaAvanzada(pregunta, respuestaUsuario) { return sistemaValidacion.buscarRespuestaAvanzada(pregunta, respuestaUsuario); }
+function validarRespuestaLibre(pregunta, objetivo, original) { return sistemaValidacion.validarRespuestaLibre(pregunta, objetivo, original); }
+function registrarRechazada(pregunta, respuestaUsuario) { return sistemaValidacion.registrarRechazada(pregunta, respuestaUsuario); }
+function obtenerRechazadas() { return sistemaValidacion.obtenerRechazadas(); }
+
+// Alias para compatibilidad con código antiguo
+function distancia(a, b) { return distanciaLevenshtein(a, b); }
+function buscarAproximada(pregunta, objetivo, original) { return sistemaValidacion.buscarAproximadaMejorada(pregunta, objetivo, sistemaValidacion.normalizarFuzzy(objetivo), original); }
+
+// Exportar todo para uso en game.js (estilo módulo global)
+window.SistemaValidacion = SistemaValidacion;
+window.sistemaValidacion = sistemaValidacion;
+window.normalizar = normalizar;
+window.normalizarFuzzy = normalizarFuzzy;
+window.variantes = variantes;
+window.jaroWinkler = jaroWinkler;
+window.distanciaLevenshtein = distanciaLevenshtein;
+window.umbralDistancia = umbralDistancia;
+window.umbralJaro = umbralJaro;
+window.esParcialValida = esParcialValida;
+window.buscarRespuestaAvanzada = buscarRespuestaAvanzada;
+window.validarRespuestaLibre = validarRespuestaLibre;
+window.registrarRechazada = registrarRechazada;
+window.obtenerRechazadas = obtenerRechazadas;
+window.distancia = distancia;
+window.buscarAproximada = buscarAproximada;

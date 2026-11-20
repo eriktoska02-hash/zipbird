@@ -1,0 +1,8901 @@
+{
+  "total_categories": 556,
+  "cerradas_categories": [
+    "capitales-africa",
+    "capitales-america",
+    "capitales-asia",
+    "capitales-europa",
+    "capitales-oceania",
+    "comunidades",
+    "continentes",
+    "equipos-nba",
+    "estados-eeuu",
+    "estados-mexico",
+    "oceanos",
+    "paises",
+    "paises-africa",
+    "paises-america",
+    "paises-asia",
+    "paises-europa",
+    "paises-oceania",
+    "paises-ue",
+    "parques-nacionales",
+    "planetas",
+    "planetas-enanos",
+    "presidentes-eeuu",
+    "presidentes-espana",
+    "provincias"
+  ],
+  "categories": [
+    {
+      "id": "accesorios",
+      "title": "un accesorio de ropa",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "acidos",
+      "title": "un ácido",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "acordes",
+      "title": "un acorde musical",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "actores-2",
+      "title": "un actor famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "actores-espana",
+      "title": "un actor o actriz español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "actores-hollywood",
+      "title": "un actor o actriz de Hollywood",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "actrices",
+      "title": "una actriz famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "albumes",
+      "title": "un álbum musical famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "aleaciones",
+      "title": "una aleación",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "algas",
+      "title": "un alga",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "animales",
+      "title": "un animal",
+      "tier_counts": [
+        6,
+        28,
+        21,
+        10,
+        10
+      ],
+      "unique_responses": 44,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 75
+    },
+    {
+      "id": "animales-agua-dulce",
+      "title": "un animal de agua dulce",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-extintos",
+      "title": "un animal extinto",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-granja",
+      "title": "un animal de granja",
+      "tier_counts": [
+        5,
+        6,
+        6,
+        6,
+        5
+      ],
+      "unique_responses": 28,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 28
+    },
+    {
+      "id": "animales-marinos",
+      "title": "un animal marino",
+      "tier_counts": [
+        5,
+        6,
+        6,
+        7,
+        6
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "animales-montana",
+      "title": "un animal de montaña",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-nocturnos",
+      "title": "un animal nocturno",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-polares",
+      "title": "un animal de los polos",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "animales-sabana",
+      "title": "un animal de la sabana",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-salvajes",
+      "title": "un animal salvaje",
+      "tier_counts": [
+        5,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unique_responses": 29,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 29
+    },
+    {
+      "id": "animales-selva",
+      "title": "un animal de la selva",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-venenosos",
+      "title": "un animal venenoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "animales-voladores",
+      "title": "un animal que vuela",
+      "tier_counts": [
+        5,
+        7,
+        7,
+        6,
+        6
+      ],
+      "unique_responses": 31,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 31
+    },
+    {
+      "id": "animes",
+      "title": "un anime",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "antibioticos",
+      "title": "un antibiótico",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "apps",
+      "title": "una aplicación móvil",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "aranidos",
+      "title": "un arácnido",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "arboles",
+      "title": "un árbol",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "arboles-2",
+      "title": "un árbol",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "arboles-frutales",
+      "title": "un árbol frutal",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "arquitectos",
+      "title": "un arquitecto famoso",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "arroces",
+      "title": "un plato de arroz",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "artes-marciales",
+      "title": "un arte marcial",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "articulaciones",
+      "title": "una articulación del cuerpo humano",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "artistas-mundo",
+      "title": "un pintor famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "asignaturas",
+      "title": "una asignatura del colegio",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "asteroides",
+      "title": "un asteroide famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "astronautas",
+      "title": "un astronauta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "astronomia-objetos",
+      "title": "un objeto del espacio",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "astronomos",
+      "title": "un astrónomo famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "atletas",
+      "title": "un atleta famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "aves",
+      "title": "un ave",
+      "tier_counts": [
+        4,
+        6,
+        6,
+        5,
+        6
+      ],
+      "unique_responses": 27,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 27
+    },
+    {
+      "id": "aves-2",
+      "title": "un ave",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "bacterias",
+      "title": "una bacteria",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "bahias",
+      "title": "una bahía famosa",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "bailes",
+      "title": "un baile",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "bailes-2",
+      "title": "un baile",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "bailes-latinos",
+      "title": "un baile latino",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "balon-oro",
+      "title": "un ganador del Balón de Oro",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 22,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 22
+    },
+    {
+      "id": "batallas-historicas",
+      "title": "una batalla histórica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "bebidas",
+      "title": "una bebida",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "bebidas-alcoholicas",
+      "title": "una bebida alcohólica",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "boxeadores",
+      "title": "un boxeador famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "cabos",
+      "title": "un cabo famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "cactus",
+      "title": "un cactus",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "cafes",
+      "title": "un tipo de café",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "califas",
+      "title": "un califa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "calzado",
+      "title": "un tipo de calzado",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "campeones-f1",
+      "title": "un campeón del mundo de Fórmula 1",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "cancilleres-alemania",
+      "title": "un canciller de Alemania",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "canciones",
+      "title": "una canción famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "canciones-2",
+      "title": "una canción famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "canidos",
+      "title": "un cánido",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "cantantes-2",
+      "title": "un cantante famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "cantantes-espana",
+      "title": "un cantante español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "cantantes-latinos",
+      "title": "un cantante latino",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "cantones-suiza",
+      "title": "un cantón de Suiza",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        6
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "capas-atmosfera",
+      "title": "una capa de la atmósfera",
+      "tier_counts": [
+        5
+      ],
+      "unique_responses": 5,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 5
+    },
+    {
+      "id": "capas-tierra",
+      "title": "una capa de la Tierra",
+      "tier_counts": [
+        5
+      ],
+      "unique_responses": 5,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 5
+    },
+    {
+      "id": "capitales-africa",
+      "title": "una capital de África",
+      "tier_counts": [
+        10,
+        11,
+        11,
+        10,
+        14
+      ],
+      "unique_responses": 56,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 56
+    },
+    {
+      "id": "capitales-alemania",
+      "title": "una capital de estado de Alemania",
+      "tier_counts": [
+        5,
+        5,
+        4,
+        2
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "capitales-america",
+      "title": "una capital de América",
+      "tier_counts": [
+        5,
+        6,
+        8,
+        11,
+        6
+      ],
+      "unique_responses": 26,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-extra.js"
+      ],
+      "total_responses": 36
+    },
+    {
+      "id": "capitales-argentina",
+      "title": "una capital de provincia de Argentina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "capitales-asia",
+      "title": "una capital de Asia",
+      "tier_counts": [
+        6,
+        12,
+        16,
+        14,
+        1
+      ],
+      "unique_responses": 49,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 49
+    },
+    {
+      "id": "capitales-australia",
+      "title": "una capital de estado de Australia",
+      "tier_counts": [
+        5,
+        3
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "capitales-brasil",
+      "title": "una capital de estado de Brasil",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        7
+      ],
+      "unique_responses": 27,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 27
+    },
+    {
+      "id": "capitales-canada",
+      "title": "una capital de provincia de Canadá",
+      "tier_counts": [
+        5,
+        4,
+        4
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "capitales-chile",
+      "title": "una capital de región de Chile",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "capitales-colombia",
+      "title": "una capital de departamento de Colombia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        12
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "capitales-comunidades",
+      "title": "una capital de comunidad autónoma",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "capitales-eeuu",
+      "title": "una capital de estado de Estados Unidos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        30
+      ],
+      "unique_responses": 50,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "capitales-europa",
+      "title": "una capital europea",
+      "tier_counts": [
+        5,
+        12,
+        13,
+        14,
+        7
+      ],
+      "unique_responses": 26,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 51
+    },
+    {
+      "id": "capitales-francia",
+      "title": "una capital de región de Francia",
+      "tier_counts": [
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "capitales-india",
+      "title": "una capital de estado de India",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        8
+      ],
+      "unique_responses": 28,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 28
+    },
+    {
+      "id": "capitales-italia-regiones",
+      "title": "una capital de región de Italia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "capitales-mexico",
+      "title": "una capital de estado de México",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        12
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "capitales-oceania",
+      "title": "una capital de Oceanía",
+      "tier_counts": [
+        2,
+        2,
+        4,
+        4,
+        2
+      ],
+      "unique_responses": 14,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 14
+    },
+    {
+      "id": "capitales-peru",
+      "title": "una capital de departamento de Perú",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "capitales-provincias-espana",
+      "title": "una capital de provincia española",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        30
+      ],
+      "unique_responses": 50,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "capitales-suiza",
+      "title": "una capital de cantón de Suiza",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        6
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "capitales-venezuela",
+      "title": "una capital de estado de Venezuela",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "carnes",
+      "title": "un tipo de carne",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "cascadas",
+      "title": "una cascada famosa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "castillos-espana",
+      "title": "un castillo de España",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "catedrales",
+      "title": "una catedral famosa",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "cereales",
+      "title": "un cereal",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "cervezas",
+      "title": "un tipo de cerveza",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "cetaceos",
+      "title": "un cetáceo",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "ciclistas",
+      "title": "un ciclista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "cientificos",
+      "title": "un científico famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "ciudades-africa",
+      "title": "una ciudad de África",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-alemania",
+      "title": "una ciudad de Alemania",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-argentina",
+      "title": "una ciudad de Argentina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-australia",
+      "title": "una ciudad de Australia",
+      "tier_counts": [
+        5,
+        4,
+        3
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "ciudades-brasil",
+      "title": "una ciudad de Brasil",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-canada",
+      "title": "una ciudad de Canadá",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "ciudades-china",
+      "title": "una ciudad de China",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-eeuu",
+      "title": "una ciudad de Estados Unidos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "ciudades-espana",
+      "title": "una ciudad de España",
+      "tier_counts": [
+        5,
+        15,
+        15,
+        10,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "ciudades-espana-2",
+      "title": "una ciudad de España",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "ciudades-europa",
+      "title": "una ciudad de Europa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "ciudades-francia",
+      "title": "una ciudad de Francia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-india",
+      "title": "una ciudad de India",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "ciudades-italia",
+      "title": "una ciudad de Italia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-japon",
+      "title": "una ciudad de Japón",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-mexico",
+      "title": "una ciudad de México",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-mundo",
+      "title": "una ciudad del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "ciudades-oceania",
+      "title": "una ciudad de Oceanía",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "ciudades-portugal",
+      "title": "una ciudad de Portugal",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "ciudades-reino-unido",
+      "title": "una ciudad del Reino Unido",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ciudades-rusia",
+      "title": "una ciudad de Rusia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "ciudades-turquia",
+      "title": "una ciudad de Turquía",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "civilizaciones",
+      "title": "una civilización antigua",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "cocteles",
+      "title": "un cóctel",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "colores",
+      "title": "un color",
+      "tier_counts": [
+        6,
+        6,
+        7,
+        8,
+        8
+      ],
+      "unique_responses": 35,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 35
+    },
+    {
+      "id": "colores-pelo",
+      "title": "un color de pelo",
+      "tier_counts": [
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "cometas",
+      "title": "un cometa famoso",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "comics",
+      "title": "un cómic famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "comida-rapida",
+      "title": "una comida rápida",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "comidas-2",
+      "title": "una comida española",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "comidas-espana",
+      "title": "una comida típica de España",
+      "tier_counts": [
+        5,
+        10,
+        11,
+        12,
+        9
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 47
+    },
+    {
+      "id": "comidas-mundo",
+      "title": "una comida del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "compositores",
+      "title": "un compositor de música clásica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "comunidades",
+      "title": "una comunidad autónoma",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        2,
+        2
+      ],
+      "unique_responses": 19,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "condimentos",
+      "title": "un condimento",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "conquistadores",
+      "title": "un conquistador español",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "consolas",
+      "title": "una consola de videojuegos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "constelaciones",
+      "title": "una constelación",
+      "tier_counts": [
+        5,
+        19,
+        20,
+        20,
+        24
+      ],
+      "unique_responses": 63,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js",
+        "datos-completar.js"
+      ],
+      "total_responses": 88
+    },
+    {
+      "id": "continentes",
+      "title": "un continente",
+      "tier_counts": [
+        5,
+        1
+      ],
+      "unique_responses": 6,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 6
+    },
+    {
+      "id": "criaturas-mitologicas",
+      "title": "una criatura mitológica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "crustaceos",
+      "title": "un crustáceo",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "cuevas",
+      "title": "una cueva famosa",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "departamentos-bolivia",
+      "title": "un departamento de Bolivia",
+      "tier_counts": [
+        5,
+        4
+      ],
+      "unique_responses": 9,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 9
+    },
+    {
+      "id": "departamentos-colombia",
+      "title": "un departamento de Colombia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        12
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "departamentos-paraguay",
+      "title": "un departamento de Paraguay",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 17,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 17
+    },
+    {
+      "id": "departamentos-peru",
+      "title": "un departamento de Perú",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "departamentos-uruguay",
+      "title": "un departamento de Uruguay",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "deportes",
+      "title": "un deporte",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "deportes-2",
+      "title": "un deporte",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "deportes-agua",
+      "title": "un deporte acuático",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "deportes-equipo",
+      "title": "un deporte de equipo",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "deportes-invierno",
+      "title": "un deporte de invierno",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "deportes-nauticos",
+      "title": "un deporte náutico",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "deportes-olimpicos",
+      "title": "un deporte olímpico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "deportistas-espana",
+      "title": "un deportista español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "descubrimientos",
+      "title": "un descubrimiento científico",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "desiertos",
+      "title": "un desierto",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "desiertos-mundo",
+      "title": "un desierto del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "dibujos-animados-2",
+      "title": "un dibujo animado",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "dictadores",
+      "title": "un dictador famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "dinastias-chinas",
+      "title": "una dinastía china",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "dinosaurios",
+      "title": "un dinosaurio",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "dioses-aztecas",
+      "title": "un dios azteca",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "dioses-celtas",
+      "title": "un dios celta",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "dioses-egipcios",
+      "title": "un dios egipcio",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "dioses-griegos",
+      "title": "un dios de la mitología griega",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "dioses-hindues",
+      "title": "un dios hindú",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "dioses-incas",
+      "title": "un dios inca",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "dioses-mayas",
+      "title": "un dios maya",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "dioses-nordicos",
+      "title": "un dios nórdico",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "dioses-romanos",
+      "title": "un dios romano",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "directores-cine",
+      "title": "un director de cine",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "discograficas",
+      "title": "una discográfica",
+      "tier_counts": [
+        5,
+        3
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "dulces",
+      "title": "un dulce",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "economistas",
+      "title": "un economista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "electrodomesticos",
+      "title": "un electrodoméstico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "elementos-quimicos",
+      "title": "un elemento químico",
+      "tier_counts": [
+        5,
+        15,
+        52,
+        20,
+        26
+      ],
+      "unique_responses": 51,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js",
+        "datos-completar.js",
+        "datos-completar.js"
+      ],
+      "total_responses": 118
+    },
+    {
+      "id": "embutidos",
+      "title": "un embutido",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "emociones",
+      "title": "una emoción",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "emperadores-bizantinos",
+      "title": "un emperador bizantino",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "emperadores-chinos",
+      "title": "un emperador chino",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "emperadores-japoneses",
+      "title": "un emperador japonés",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "emperadores-romanos",
+      "title": "un emperador romano",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        10
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "emperadores-sacro-imperio",
+      "title": "un emperador del Sacro Imperio Romano Germánico",
+      "tier_counts": [
+        5,
+        4,
+        3
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "empresas",
+      "title": "una empresa famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "energias-renovables",
+      "title": "una energía renovable",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "enfermedades",
+      "title": "una enfermedad",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "entrenadores-futbol",
+      "title": "un entrenador de fútbol famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "enzimas",
+      "title": "una enzima",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "equipos-bundesliga",
+      "title": "un equipo de la Bundesliga alemana",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 18,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 18
+    },
+    {
+      "id": "equipos-euroliga",
+      "title": "un equipo de la Euroliga de baloncesto",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "equipos-futbol",
+      "title": "un equipo de fútbol español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "equipos-laliga",
+      "title": "un equipo de la Liga española",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "equipos-ligue1",
+      "title": "un equipo de la Ligue 1 francesa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 18,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 18
+    },
+    {
+      "id": "equipos-mlb",
+      "title": "un equipo de las Grandes Ligas de béisbol",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        10
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "equipos-nba",
+      "title": "un equipo de la NBA",
+      "tier_counts": [
+        5,
+        5,
+        10,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-extra.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "equipos-nfl",
+      "title": "un equipo de la NFL",
+      "tier_counts": [
+        5,
+        8,
+        8,
+        8,
+        3
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "equipos-nhl",
+      "title": "un equipo de la NHL",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        12
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "equipos-premier",
+      "title": "un equipo de la Premier League",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "equipos-seriea",
+      "title": "un equipo de la Serie A italiana",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "eras-geologicas",
+      "title": "una era geológica",
+      "tier_counts": [
+        6
+      ],
+      "unique_responses": 6,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 6
+    },
+    {
+      "id": "escritores-2",
+      "title": "un escritor famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "escritores-espana",
+      "title": "un escritor español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "escritores-mundo",
+      "title": "un escritor famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "escultores",
+      "title": "un escultor famoso",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "especialidades-medicas",
+      "title": "una especialidad médica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "especias",
+      "title": "una especia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "estadios",
+      "title": "un estadio famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "estados-alemania",
+      "title": "un estado de Alemania",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "estados-australia",
+      "title": "un estado o territorio de Australia",
+      "tier_counts": [
+        5,
+        3
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "estados-austria",
+      "title": "un estado de Austria",
+      "tier_counts": [
+        5,
+        4
+      ],
+      "unique_responses": 9,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 9
+    },
+    {
+      "id": "estados-brasil",
+      "title": "un estado de Brasil",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        7
+      ],
+      "unique_responses": 27,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 27
+    },
+    {
+      "id": "estados-eeuu",
+      "title": "un estado de Estados Unidos",
+      "tier_counts": [
+        5,
+        10,
+        15,
+        15,
+        5
+      ],
+      "unique_responses": 50,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "estados-india",
+      "title": "un estado de India",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        8
+      ],
+      "unique_responses": 28,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 28
+    },
+    {
+      "id": "estados-materia",
+      "title": "un estado de la materia",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "estados-mexico",
+      "title": "un estado de México",
+      "tier_counts": [
+        5,
+        7,
+        7,
+        7,
+        6
+      ],
+      "unique_responses": 32,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "estados-sudafrica",
+      "title": "una provincia de Sudáfrica",
+      "tier_counts": [
+        5,
+        4
+      ],
+      "unique_responses": 9,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 9
+    },
+    {
+      "id": "estados-venezuela",
+      "title": "un estado de Venezuela",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 23,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 23
+    },
+    {
+      "id": "estrechos",
+      "title": "un estrecho famoso",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "estrellas",
+      "title": "una estrella famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "eurovision",
+      "title": "un ganador de Eurovisión",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "expediciones",
+      "title": "un explorador famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "exploradores",
+      "title": "un explorador famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "faraones",
+      "title": "un faraón de Egipto",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "felinos",
+      "title": "un felino",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        4,
+        4
+      ],
+      "unique_responses": 23,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 23
+    },
+    {
+      "id": "festivales-musica",
+      "title": "un festival de música",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "fiestas-espana",
+      "title": "una fiesta típica de España",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "fiestas-mundo",
+      "title": "una fiesta del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "figuras-literarias",
+      "title": "una figura literaria",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "filosofos",
+      "title": "un filósofo famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "flores",
+      "title": "una flor",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "flores-2",
+      "title": "una flor",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "formas-geometricas",
+      "title": "una forma geométrica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "frutas",
+      "title": "una fruta",
+      "tier_counts": [
+        5,
+        12,
+        15,
+        10,
+        5
+      ],
+      "unique_responses": 28,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 47
+    },
+    {
+      "id": "frutas-2",
+      "title": "una fruta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "frutas-tropicales",
+      "title": "una fruta tropical",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "frutos",
+      "title": "un fruto",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "frutos-secos",
+      "title": "un fruto seco",
+      "tier_counts": [
+        4,
+        5,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "futbolistas-2",
+      "title": "un futbolista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "gases",
+      "title": "un gas",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 18,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 18
+    },
+    {
+      "id": "generos-musicales",
+      "title": "un género musical",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "glandulas",
+      "title": "una glándula del cuerpo humano",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "golfos",
+      "title": "un golfo",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "grupos-2",
+      "title": "un grupo de música famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "grupos-espana",
+      "title": "un grupo de música español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "grupos-musica",
+      "title": "un grupo de música",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "grupos-tabla-periodica",
+      "title": "un grupo de la tabla periódica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 18,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 18
+    },
+    {
+      "id": "guerras",
+      "title": "una guerra famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "habitaciones",
+      "title": "una habitación de una casa",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "helados",
+      "title": "un sabor de helado",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "heroes-mitologicos",
+      "title": "un héroe mitológico",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "herramientas",
+      "title": "una herramienta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "herramientas-2",
+      "title": "una herramienta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "hierbas-aromaticas",
+      "title": "una hierba aromática",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "hongos",
+      "title": "un hongo",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "hormonas",
+      "title": "una hormona",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "huesos",
+      "title": "un hueso del cuerpo humano",
+      "tier_counts": [
+        5,
+        14,
+        14,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-vida.js"
+      ],
+      "total_responses": 43
+    },
+    {
+      "id": "idiomas",
+      "title": "un idioma",
+      "tier_counts": [
+        5,
+        9,
+        16,
+        29,
+        32
+      ],
+      "unique_responses": 66,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 91
+    },
+    {
+      "id": "imperios",
+      "title": "un imperio histórico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "infusiones",
+      "title": "una infusión",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "insectos",
+      "title": "un insecto",
+      "tier_counts": [
+        5,
+        6,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "insectos-2",
+      "title": "un insecto",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "instrumentos",
+      "title": "un instrumento musical",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "instrumentos-cientificos",
+      "title": "un instrumento científico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "instrumentos-cuerda",
+      "title": "un instrumento de cuerda",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "instrumentos-laboratorio",
+      "title": "un instrumento de laboratorio",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "instrumentos-medicos",
+      "title": "un instrumento médico",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "instrumentos-percusion",
+      "title": "un instrumento de percusión",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "instrumentos-viento",
+      "title": "un instrumento de viento",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "inventores",
+      "title": "un inventor famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "inventos",
+      "title": "un invento",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "islas",
+      "title": "una isla",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "islas-espana",
+      "title": "una isla de España",
+      "tier_counts": [
+        5,
+        4,
+        3
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "islas-mundo-2",
+      "title": "una isla del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "jjoo-sedes",
+      "title": "una ciudad olímpica",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "juegos-mesa",
+      "title": "un juego de mesa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "juegos-populares",
+      "title": "un juego popular de calle",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        5,
+        5
+      ],
+      "unique_responses": 22,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 22
+    },
+    {
+      "id": "jugadores-baloncesto",
+      "title": "un jugador de baloncesto famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "jugadores-beisbol",
+      "title": "un jugador de béisbol famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "jugadores-futbol",
+      "title": "un futbolista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "jugadores-golf",
+      "title": "un golfista famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "juguetes",
+      "title": "un juguete",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "lagos",
+      "title": "un lago",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "lagos-espana",
+      "title": "un lago o laguna de España",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "lagos-mundo",
+      "title": "un lago del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "legumbres",
+      "title": "una legumbre",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "lenguajes-programacion",
+      "title": "un lenguaje de programación",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "lenguas-espana",
+      "title": "una lengua o idioma de España",
+      "tier_counts": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "leyes-fisicas",
+      "title": "una ley física",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "libros-2",
+      "title": "un libro famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "libros-famosos",
+      "title": "un libro famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "lunas-sistema-solar",
+      "title": "una luna del sistema solar",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "magnitudes-fisicas",
+      "title": "una magnitud física",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "mamiferos",
+      "title": "un mamífero",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "mangas",
+      "title": "un manga famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "maravillas-antiguas",
+      "title": "una maravilla del mundo antiguo",
+      "tier_counts": [
+        3,
+        2,
+        2
+      ],
+      "unique_responses": 7,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 7
+    },
+    {
+      "id": "maravillas-modernas",
+      "title": "una maravilla del mundo moderno",
+      "tier_counts": [
+        4,
+        3
+      ],
+      "unique_responses": 7,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 7
+    },
+    {
+      "id": "marcas-coches",
+      "title": "una marca de coches",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "marcas-espana",
+      "title": "una marca española",
+      "tier_counts": [
+        5,
+        11,
+        12,
+        11,
+        12,
+        7
+      ],
+      "unique_responses": 33,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 58
+    },
+    {
+      "id": "marcas-moto",
+      "title": "una marca de motos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "marcas-ropa",
+      "title": "una marca de ropa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "marcas-tecnologia",
+      "title": "una marca de tecnología",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "mares",
+      "title": "un mar",
+      "tier_counts": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "mariscos",
+      "title": "un marisco",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "mariscos-2",
+      "title": "un marisco",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "marsupiales",
+      "title": "un marsupial",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "mascotas",
+      "title": "una mascota",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "matematicos",
+      "title": "un matemático famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "materiales",
+      "title": "un material",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "materiales-construccion",
+      "title": "un material de construcción",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "metales",
+      "title": "un metal",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "minerales",
+      "title": "un mineral",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "misiones-espaciales",
+      "title": "una misión espacial",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "moluscos",
+      "title": "un molusco",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "monedas",
+      "title": "una moneda",
+      "tier_counts": [
+        4,
+        25,
+        25,
+        4,
+        5
+      ],
+      "unique_responses": 42,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 63
+    },
+    {
+      "id": "montanas-espana",
+      "title": "una montaña o sierra de España",
+      "tier_counts": [
+        5,
+        12,
+        12,
+        11,
+        10
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "montanas-mundo",
+      "title": "una montaña o cordillera del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "montanas-mundo-2",
+      "title": "una montaña o cordillera del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "monumentos-espana",
+      "title": "un monumento de España",
+      "tier_counts": [
+        5,
+        10,
+        10,
+        10,
+        10,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "monumentos-mundo",
+      "title": "un monumento famoso del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "motociclismo",
+      "title": "un piloto de motociclismo famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "movimientos-artisticos",
+      "title": "un movimiento artístico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "muebles",
+      "title": "un mueble",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "mujeres-cientificas",
+      "title": "una científica famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "mujeres-historicas",
+      "title": "una mujer histórica famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "mundiales-futbol",
+      "title": "un país que ha organizado un Mundial de fútbol",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 18,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 18
+    },
+    {
+      "id": "musculos",
+      "title": "un músculo del cuerpo humano",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "museos",
+      "title": "un museo famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "nadadores",
+      "title": "un nadador famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "naves-espaciales",
+      "title": "una nave o misión espacial",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "nobel-literatura",
+      "title": "un premio nobel de literatura",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "nobel-paz",
+      "title": "un premio nobel de la paz",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "notas-musicales",
+      "title": "una nota musical",
+      "tier_counts": [
+        5,
+        2,
+        3,
+        3
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "nubes",
+      "title": "un tipo de nube",
+      "tier_counts": [
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "objetos-bano",
+      "title": "un objeto de baño",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "objetos-oficina",
+      "title": "un objeto de oficina",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "obras-arte",
+      "title": "una obra de arte famosa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "obras-shakespeare",
+      "title": "una obra de Shakespeare",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "obras-teatro",
+      "title": "una obra de teatro famosa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "oceanos",
+      "title": "un océano",
+      "tier_counts": [
+        4,
+        1
+      ],
+      "unique_responses": 5,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 5
+    },
+    {
+      "id": "oficios",
+      "title": "un oficio",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "operas",
+      "title": "una ópera famosa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "organos",
+      "title": "un órgano del cuerpo humano",
+      "tier_counts": [
+        5,
+        16,
+        12,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-vida.js"
+      ],
+      "total_responses": 43
+    },
+    {
+      "id": "organulos",
+      "title": "un orgánulo celular",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "paises",
+      "title": "un país",
+      "tier_counts": [
+        6,
+        62,
+        84,
+        40,
+        5
+      ],
+      "unique_responses": 168,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 197
+    },
+    {
+      "id": "paises-africa",
+      "title": "un país de África",
+      "tier_counts": [
+        5,
+        10,
+        23,
+        11,
+        5
+      ],
+      "unique_responses": 29,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 54
+    },
+    {
+      "id": "paises-america",
+      "title": "un país de América",
+      "tier_counts": [
+        5,
+        6,
+        7,
+        12,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 35
+    },
+    {
+      "id": "paises-america-central",
+      "title": "un país de América Central",
+      "tier_counts": [
+        5,
+        2
+      ],
+      "unique_responses": 7,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 7
+    },
+    {
+      "id": "paises-andinos",
+      "title": "un país de la cordillera de los Andes",
+      "tier_counts": [
+        5,
+        2
+      ],
+      "unique_responses": 7,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 7
+    },
+    {
+      "id": "paises-asean",
+      "title": "un país de la ASEAN",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "paises-asia",
+      "title": "un país de Asia",
+      "tier_counts": [
+        5,
+        15,
+        15,
+        8,
+        5
+      ],
+      "unique_responses": 24,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 48
+    },
+    {
+      "id": "paises-balcanes",
+      "title": "un país de los Balcanes",
+      "tier_counts": [
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 11,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 11
+    },
+    {
+      "id": "paises-caribe",
+      "title": "un país del Caribe",
+      "tier_counts": [
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "paises-europa",
+      "title": "un país de Europa",
+      "tier_counts": [
+        5,
+        16,
+        13,
+        12,
+        5
+      ],
+      "unique_responses": 26,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 51
+    },
+    {
+      "id": "paises-magreb",
+      "title": "un país del Magreb",
+      "tier_counts": [
+        5
+      ],
+      "unique_responses": 5,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 5
+    },
+    {
+      "id": "paises-nordicos",
+      "title": "un país nórdico",
+      "tier_counts": [
+        5
+      ],
+      "unique_responses": 5,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 5
+    },
+    {
+      "id": "paises-oceania",
+      "title": "un país de Oceanía",
+      "tier_counts": [
+        2,
+        2,
+        3,
+        4,
+        3
+      ],
+      "unique_responses": 14,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 14
+    },
+    {
+      "id": "paises-opep",
+      "title": "un país de la OPEP",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "paises-otan",
+      "title": "un país de la OTAN",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        12
+      ],
+      "unique_responses": 32,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 32
+    },
+    {
+      "id": "paises-sahel",
+      "title": "un país del Sahel",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "paises-ue",
+      "title": "un país de la Unión Europea",
+      "tier_counts": [
+        5,
+        7,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-mundo.js"
+      ],
+      "total_responses": 27
+    },
+    {
+      "id": "panes",
+      "title": "un tipo de pan",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "papas",
+      "title": "un papa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "parques-nacionales",
+      "title": "un parque nacional de España",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 16,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "parques-nacionales-mundo",
+      "title": "un parque nacional del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "parques-tematicos",
+      "title": "un parque temático",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "partes-bicicleta",
+      "title": "una parte de una bicicleta",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "partes-casa",
+      "title": "una parte de una casa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "partes-celula",
+      "title": "una parte de la célula",
+      "tier_counts": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "partes-cerebro",
+      "title": "una parte del cerebro",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "partes-coche",
+      "title": "una parte de un coche",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "partes-corazon",
+      "title": "una parte del corazón",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "partes-cuerpo",
+      "title": "una parte del cuerpo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "partes-libro",
+      "title": "una parte de un libro",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "partes-ojo",
+      "title": "una parte del ojo",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "partes-ordenador",
+      "title": "una parte de un ordenador",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "partes-planta",
+      "title": "una parte de la planta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "particulas-subatomicas",
+      "title": "una partícula subatómica",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "pastas",
+      "title": "un tipo de pasta",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "peces",
+      "title": "un pez",
+      "tier_counts": [
+        5,
+        5,
+        6,
+        5,
+        5
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "peces-2",
+      "title": "un pez",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "peliculas-2",
+      "title": "una película famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 35,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 35
+    },
+    {
+      "id": "peliculas-accion",
+      "title": "una película de acción",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "peliculas-animacion",
+      "title": "una película de animación",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "peliculas-ciencia-ficcion",
+      "title": "una película de ciencia ficción",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "peliculas-comedia",
+      "title": "una película de comedia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "peliculas-disney",
+      "title": "una película de Disney",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "peliculas-famosas",
+      "title": "una película famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "peliculas-oscar",
+      "title": "una película ganadora del Óscar",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "peliculas-pixar",
+      "title": "una película de Pixar",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "peliculas-superheroes",
+      "title": "una película de superhéroes",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "peliculas-terror",
+      "title": "una película de terror",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "peninsulas",
+      "title": "una península famosa",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "periodos-geologicos",
+      "title": "un período geológico",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "personajes-anime",
+      "title": "un personaje de anime",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "personajes-big-bang",
+      "title": "un personaje de The Big Bang Theory",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-breaking-bad",
+      "title": "un personaje de Breaking Bad",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-casa-papel",
+      "title": "un personaje de La casa de papel",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-dibujos",
+      "title": "un personaje de dibujos animados",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-disney",
+      "title": "un personaje de Disney",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-grecia",
+      "title": "un personaje de la Antigua Grecia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "personajes-harry-potter",
+      "title": "un personaje de Harry Potter",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-historicos",
+      "title": "un personaje histórico",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-ilustracion",
+      "title": "un personaje de la Ilustración",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "personajes-juego-tronos",
+      "title": "un personaje de Juego de Tronos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-literarios",
+      "title": "un personaje literario",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-revolucion-francesa",
+      "title": "un personaje de la Revolución Francesa",
+      "tier_counts": [
+        5,
+        4,
+        3
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "personajes-revolucion-rusa",
+      "title": "un personaje de la Revolución Rusa",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "personajes-roma",
+      "title": "un personaje de la Antigua Roma",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "personajes-segunda-guerra",
+      "title": "un personaje de la Segunda Guerra Mundial",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "personajes-simpsons",
+      "title": "un personaje de Los Simpson",
+      "tier_counts": [
+        5,
+        6,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "personajes-star-wars",
+      "title": "un personaje de Star Wars",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-stranger-things",
+      "title": "un personaje de Stranger Things",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "personajes-videojuegos",
+      "title": "un personaje de videojuego",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "pescados",
+      "title": "un pescado",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "pescados-2",
+      "title": "un pescado",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "picos-espana",
+      "title": "una montaña de España",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-7.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "pilotos-f1",
+      "title": "un piloto de Fórmula 1",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "pintores",
+      "title": "un pintor universal",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "pintores-espana",
+      "title": "un pintor español",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "piratas",
+      "title": "un pirata famoso",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "pizzas",
+      "title": "un tipo de pizza",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "planetas",
+      "title": "un planeta del sistema solar",
+      "tier_counts": [
+        5,
+        3
+      ],
+      "unique_responses": 8,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "planetas-enanos",
+      "title": "un planeta enano",
+      "tier_counts": [
+        3,
+        3,
+        4
+      ],
+      "unique_responses": 10,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "plantas",
+      "title": "una planta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "plantas-2",
+      "title": "una planta",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "plantas-carnivoras",
+      "title": "una planta carnívora",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "plantas-medicinales",
+      "title": "una planta medicinal",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "poetas",
+      "title": "un poeta famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "pokemon",
+      "title": "un pokémon",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "posiciones-futbol",
+      "title": "una posición de fútbol",
+      "tier_counts": [
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 11,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 11
+    },
+    {
+      "id": "postres",
+      "title": "un postre",
+      "tier_counts": [
+        5,
+        10,
+        11,
+        8,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-vida.js"
+      ],
+      "total_responses": 39
+    },
+    {
+      "id": "postres-2",
+      "title": "un postre",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "premios-cervantes",
+      "title": "un ganador del Premio Cervantes",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "premios-goya",
+      "title": "una película ganadora del Goya a mejor película",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "premios-nobel",
+      "title": "un premio nobel famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "prendas",
+      "title": "una prenda de vestir",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "prendas-2",
+      "title": "una prenda de ropa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "presentadores",
+      "title": "un presentador de televisión",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "presidentes-argentina",
+      "title": "un presidente de Argentina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        6
+      ],
+      "unique_responses": 26,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 26
+    },
+    {
+      "id": "presidentes-brasil",
+      "title": "un presidente de Brasil",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "presidentes-eeuu",
+      "title": "un presidente de Estados Unidos",
+      "tier_counts": [
+        6,
+        7,
+        11,
+        20,
+        1
+      ],
+      "unique_responses": 45,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 45
+    },
+    {
+      "id": "presidentes-espana",
+      "title": "un presidente del Gobierno de España",
+      "tier_counts": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "unique_responses": 7,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js"
+      ],
+      "total_responses": 7
+    },
+    {
+      "id": "presidentes-francia",
+      "title": "un presidente de Francia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "presidentes-mexico",
+      "title": "un presidente de México",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "primates",
+      "title": "un primate",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "primeros-ministros-espana",
+      "title": "un presidente del Gobierno de España",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "primeros-ministros-uk",
+      "title": "un primer ministro del Reino Unido",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 22,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 22
+    },
+    {
+      "id": "profesiones",
+      "title": "una profesión",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "programas-tv",
+      "title": "un programa de televisión español",
+      "tier_counts": [
+        5,
+        10,
+        10,
+        10,
+        10
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 45
+    },
+    {
+      "id": "provincias",
+      "title": "una provincia de España",
+      "tier_counts": [
+        8,
+        12,
+        14,
+        8,
+        8
+      ],
+      "unique_responses": 40,
+      "is_cerrada": true,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 50
+    },
+    {
+      "id": "provincias-argentina",
+      "title": "una provincia de Argentina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 23,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 23
+    },
+    {
+      "id": "provincias-belgica",
+      "title": "una provincia de Bélgica",
+      "tier_counts": [
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 11,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 11
+    },
+    {
+      "id": "provincias-canada",
+      "title": "una provincia o territorio de Canadá",
+      "tier_counts": [
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "provincias-china",
+      "title": "una provincia o región de China",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        13
+      ],
+      "unique_responses": 33,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 33
+    },
+    {
+      "id": "provincias-cuba",
+      "title": "una provincia de Cuba",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "provincias-ecuador",
+      "title": "una provincia de Ecuador",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 24,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 24
+    },
+    {
+      "id": "provincias-paises-bajos",
+      "title": "una provincia de los Países Bajos",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "pruebas-atletismo",
+      "title": "una prueba de atletismo",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "puentes",
+      "title": "un puente famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "quesos",
+      "title": "un tipo de queso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "quesos-2",
+      "title": "un queso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "ramas-biologia",
+      "title": "una rama de la biología",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "ramas-ciencia",
+      "title": "una rama de la ciencia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "rascacielos",
+      "title": "un rascacielos famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "razas-gato",
+      "title": "una raza de gato",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "razas-gato-2",
+      "title": "una raza de gato",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "razas-perro",
+      "title": "una raza de perro",
+      "tier_counts": [
+        5,
+        6,
+        6,
+        5,
+        5
+      ],
+      "unique_responses": 27,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 27
+    },
+    {
+      "id": "razas-perro-2",
+      "title": "una raza de perro",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "redes-sociales",
+      "title": "una red social",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "refrescos",
+      "title": "un refresco",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "regiones-chile",
+      "title": "una región de Chile",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 16,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 16
+    },
+    {
+      "id": "regiones-italia",
+      "title": "una región de Italia",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "regiones-marruecos",
+      "title": "una región de Marruecos",
+      "tier_counts": [
+        5,
+        4,
+        3
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "religiones",
+      "title": "una religión",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "reptiles",
+      "title": "un reptil",
+      "tier_counts": [
+        5,
+        6,
+        5,
+        4,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "reptiles-2",
+      "title": "un reptil",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "revoluciones",
+      "title": "una revolución histórica",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "reyes-espana",
+      "title": "un rey o reina de España",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-espana.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "reyes-francia",
+      "title": "un rey de Francia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "reyes-godos",
+      "title": "un rey godo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "reyes-reino-unido",
+      "title": "un rey o reina del Reino Unido",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 22,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 22
+    },
+    {
+      "id": "rios-africa",
+      "title": "un río de África",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "rios-america",
+      "title": "un río de América",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "rios-asia",
+      "title": "un río de Asia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "rios-espana",
+      "title": "un río de España",
+      "tier_counts": [
+        5,
+        12,
+        13,
+        14,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 49
+    },
+    {
+      "id": "rios-europa",
+      "title": "un río de Europa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "rios-mundo",
+      "title": "un río del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-mundo.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "rocas",
+      "title": "un tipo de roca",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "roedores",
+      "title": "un roedor",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "roland-garros",
+      "title": "un ganador de Roland Garros",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "sagas-cine",
+      "title": "una saga de cine",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "sagas-videojuegos",
+      "title": "una saga de videojuegos",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "salsas",
+      "title": "una salsa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "samurais",
+      "title": "un samurái famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "santos",
+      "title": "un santo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "satelites",
+      "title": "un satélite natural del sistema solar",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "series-2",
+      "title": "una serie famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 30,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 30
+    },
+    {
+      "id": "series-animacion",
+      "title": "una serie de animación",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "series-comedia",
+      "title": "una serie de comedia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "series-drama",
+      "title": "una serie de drama",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "series-espana",
+      "title": "una serie española",
+      "tier_counts": [
+        5,
+        10,
+        10,
+        10,
+        10,
+        8
+      ],
+      "unique_responses": 28,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 53
+    },
+    {
+      "id": "series-fantasia",
+      "title": "una serie de fantasía",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "series-infantiles",
+      "title": "una serie infantil",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "series-medicas",
+      "title": "una serie médica",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "series-mundo",
+      "title": "una serie de televisión famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "series-policiacas",
+      "title": "una serie policiaca",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "setas",
+      "title": "una seta",
+      "tier_counts": [
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "signos-zodiaco",
+      "title": "un signo del zodiaco",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "simbolos-matematicos",
+      "title": "un símbolo matemático",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "sistemas-cuerpo",
+      "title": "un sistema del cuerpo humano",
+      "tier_counts": [
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 11,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 11
+    },
+    {
+      "id": "sistemas-operativos",
+      "title": "un sistema operativo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "sopas",
+      "title": "una sopa",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "streamers",
+      "title": "un streamer famoso",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "sultanes-otomanos",
+      "title": "un sultán otomano",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "superheroes",
+      "title": "un superhéroe",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "superheroes-dc",
+      "title": "un superhéroe de DC",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "superheroes-marvel",
+      "title": "un superhéroe de Marvel",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "tapas",
+      "title": "una tapa",
+      "tier_counts": [
+        5,
+        10,
+        11,
+        9,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-espana.js"
+      ],
+      "total_responses": 40
+    },
+    {
+      "id": "tejidos",
+      "title": "un tejido del cuerpo humano",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "telescopios",
+      "title": "un telescopio famoso",
+      "tier_counts": [
+        5,
+        5,
+        2
+      ],
+      "unique_responses": 12,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 12
+    },
+    {
+      "id": "tenistas",
+      "title": "un tenista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "tenistas-2",
+      "title": "un tenista famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "tipos-celula",
+      "title": "un tipo de célula",
+      "tier_counts": [
+        4,
+        4
+      ],
+      "unique_responses": 8,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 8
+    },
+    {
+      "id": "tipos-energia",
+      "title": "un tipo de energía",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "tipos-plano",
+      "title": "un tipo de plano cinematográfico",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-9.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "tipos-reaccion",
+      "title": "un tipo de reacción química",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "tipos-sangre",
+      "title": "un grupo sanguíneo",
+      "tier_counts": [
+        4,
+        4,
+        4,
+        2,
+        5
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-series.js"
+      ],
+      "total_responses": 19
+    },
+    {
+      "id": "tipos-texto",
+      "title": "un tipo de texto",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "tipos-vivienda",
+      "title": "un tipo de vivienda",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "titanes",
+      "title": "un titán de la mitología griega",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "tour-francia",
+      "title": "un ganador del Tour de Francia",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "tradiciones",
+      "title": "una tradición o fiesta popular",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "transportes",
+      "title": "un medio de transporte",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "tratados",
+      "title": "un tratado histórico",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-2.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "unidades-medida",
+      "title": "una unidad de medida",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ciencia.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "unidades-si",
+      "title": "una unidad del sistema internacional",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "utensilios-2",
+      "title": "un utensilio de cocina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "utensilios-cocina",
+      "title": "un utensilio de cocina",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-vida.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "vehiculos",
+      "title": "un vehículo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "verduras",
+      "title": "una verdura",
+      "tier_counts": [
+        5,
+        13,
+        11,
+        5,
+        5
+      ],
+      "unique_responses": 27,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-completar.js",
+        "datos-naturaleza.js"
+      ],
+      "total_responses": 39
+    },
+    {
+      "id": "verduras-2",
+      "title": "una verdura",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "videojuegos",
+      "title": "un videojuego",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-ocio.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "videojuegos-2",
+      "title": "un videojuego famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "videojuegos-moviles",
+      "title": "un videojuego móvil",
+      "tier_counts": [
+        5,
+        5
+      ],
+      "unique_responses": 10,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 10
+    },
+    {
+      "id": "videojuegos-nintendo",
+      "title": "un videojuego de Nintendo",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "villanos",
+      "title": "un villano famoso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        1
+      ],
+      "unique_responses": 21,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-4.js"
+      ],
+      "total_responses": 21
+    },
+    {
+      "id": "vinos",
+      "title": "un tipo de vino",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-5.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "virus",
+      "title": "un virus",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "vitaminas",
+      "title": "una vitamina",
+      "tier_counts": [
+        5,
+        5,
+        3
+      ],
+      "unique_responses": 13,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-3.js"
+      ],
+      "total_responses": 13
+    },
+    {
+      "id": "volcanes",
+      "title": "un volcán",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "volcanes-mundo",
+      "title": "un volcán del mundo",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 20,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-1.js"
+      ],
+      "total_responses": 20
+    },
+    {
+      "id": "webs",
+      "title": "una página web famosa",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 25,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-extra.js"
+      ],
+      "total_responses": 25
+    },
+    {
+      "id": "wimbledon",
+      "title": "un ganador de Wimbledon",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-8.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "youtubers",
+      "title": "un youtuber o streamer español",
+      "tier_counts": [
+        5,
+        5,
+        5
+      ],
+      "unique_responses": 15,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-cultura.js"
+      ],
+      "total_responses": 15
+    },
+    {
+      "id": "zares-rusos",
+      "title": "un zar ruso",
+      "tier_counts": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "unique_responses": 19,
+      "is_cerrada": false,
+      "source_files": [
+        "datos-masivo-6.js"
+      ],
+      "total_responses": 19
+    }
+  ]
+}

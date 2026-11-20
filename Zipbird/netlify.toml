@@ -1,0 +1,11 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  directory = "netlify/functions"
+  external_node_modules = ["node-fetch"]
+
+[[redirects]]
+  from = "/api/validar-ia"
+  to = "/.netlify/functions/validar-ia"
+  status = 200
